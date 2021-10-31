@@ -1,0 +1,427 @@
+@import "variables.scss";
+
+.modal {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    visibility: hidden;
+    backface-visibility: hidden;
+
+    width: 920px;
+    height: auto;
+    margin: auto;
+}
+  
+.modalshow {
+    visibility: visible;
+}
+
+.modalcontent {
+    background-color: $White;
+    z-index: 30;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+  
+.modaloverlay {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    background: rgba(#7f817f, 0.5);
+    transition: all 0.3s;
+    position: fixed;
+}
+  
+.modalshow ~ .modaloverlay {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.modaleffect .modalcontent {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s;
+}
+  
+.modalshow.modaleffect ~ .modaloverlay {
+    background-color: rgba( grey, 0.8);
+} 
+    
+.modalshow.modaleffect .modalcontent {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal {
+    &__slider-1,
+    &__slider-2,
+    &__slider-3 {
+        position: absolute;
+        display: none;
+        width: 920px;
+        background-color: $White;
+    }
+    &__slider--active {
+        display: block;
+    }
+}
+
+// станица modal-main
+.modal {
+    .modal__main {
+        width: 1121px;
+        height: 700px;
+        background-color: $White;
+        margin: auto;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        position: relative;
+        display: none;
+        left: -100px;
+    }
+    .modal__slider--active {
+        display: block;
+    }
+
+    &__main-img:first-child img{
+        border-radius: 5px 5px 0 0;
+    }
+    &__main-close {
+        position: absolute;
+        top: 30px;
+        left: 1061px;
+    }
+    &__main-close:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    &__main-title {
+        max-width: 678px;
+        margin: 30px auto 20px;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $Orange;
+    }
+    &__main-text {
+        max-width: 570px;
+        margin: 0 auto 30px;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+    }
+    &__main-buttons {
+        width: 1000px;
+        margin: 0 41px auto 80px;
+        display: flex;
+    }
+    &__main-btn,
+    &__main-btnbig {
+        width: 100px;
+        height: 65px;
+        background: $Turquoise;
+        border-radius: 5px;
+        transition: all 0.5s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $White;
+    }
+    &__main-btn:hover,
+    &__main-btnbig:hover {
+        cursor: pointer;
+        background: $Turquoise-hover;
+    }
+    &__main-btn {
+        margin-right: 40px;
+    }
+    &__main-btn--active {
+        background: $Turquoise-hover;
+    }
+    &__main-btnbig {
+        width: 200px;
+    }
+}
+// станица modal-1
+.modal {
+    &__header {
+        height: 135px;
+        background: $Orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px 5px 0 0;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 51px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $White;
+    }
+    &__inner-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: $Black;
+        padding: 50px 0 10px 123px;
+        border-bottom: 1px solid #a4a8ae;
+    }
+    &__info {
+        padding: 40px 0 0 0;
+        width: 680px;
+        margin: 0 auto;
+    }
+    &__info-title {
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: 10px;
+    }
+    &__info-star {
+        color: $Turquoise;
+    }
+    &__dollars,
+    &__otheramount,
+    &__forspecialpet {
+        display: flex;
+        margin-bottom: 40px;
+    }
+    &__dollars {
+        justify-content: space-between;
+    }
+    &__dollar-item {
+        width: 80px;
+        height: 65px;
+        background: rgba($Turquoise, 0.5);
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $White;
+        transition: all 0.5s;
+    }
+    &__dollar-item:hover,
+    &__otheramount-btn:hover,
+    &__forspecialpet-btn:hover {
+        cursor: pointer;
+        background: $Turquoise-hover;
+    }
+    &__otheramount-btn,
+    &__forspecialpet-btn,
+    &__nextbtn {
+        width: 200px;
+        height: 65px;
+        background: #80cfc8;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $White;
+        transition: all 0.5s;
+    }
+    &__dollar-item--active {
+        background: $Turquoise-hover;
+    }
+    &__forspecialpet-select,
+    &__otheramount-input {
+        width: 440px;
+        height: 65px;
+        border: 1px solid $Black;
+        border-radius: 5px;
+        margin-left: 40px;
+
+        font-size: 18px;
+        line-height: 150%;
+        font-weight: 400;
+    }
+    &__otheramount-input {
+        font-size: 18px;
+        line-height: 150%;
+        padding-left: 20px;
+    }
+    &__forspecialpet-select{
+        color: #a4a8ae;
+        padding-left: 20px;
+    }
+    &__checketbox,
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    &__checketbox-input {
+        width: 30px;
+        height: 30px;
+    }
+    &__checketbox-text {
+        font-size: 18px;
+        line-height: 150%;
+        padding-left: 20px;
+    }
+    &__buttons {
+        padding: 50px 0 82px;
+        width: 680px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__nextbtn {
+        height: 74px;
+        position: absolute;
+        left: 375px;
+        transition: all 0.5s;
+    }
+    .modal__nextbtn::after {
+        content: "";
+        background: url(../../../assets/images/modal-arrow.png);
+        width: 25px;
+        height: 22px;
+        margin-left: 10px;
+      }
+
+    &__nextbtn:hover {
+        cursor: pointer;
+        background: $Turquoise-hover;
+        transition: all 0.5s;
+    }
+}
+
+// станица modal-2
+.modal {
+    &__yourname-input,
+    &__youremailaddress-input {
+        width: 680px;
+        height: 60px;
+        border: 1px solid $Black;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: 150%;
+        padding-left: 20px;
+    }
+    &__info-title-2 {
+        margin-top: 51px;
+    }
+    &__yourname-input::placeholder,
+    &__youremailaddress-input::placeholder {
+        font-size: 18px;
+        line-height: 150%;
+        color: #A4A8AE;
+    }
+    &__youremailaddress-text {
+        font-size: 18px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.7);
+        margin: 10px 0 32px 0;
+    }
+    &__backbtn {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        text-decoration-line: underline;
+        color: #00A092;
+        position: absolute;
+        left: 164px;
+    }
+    &__backbtn:hover {
+        cursor: pointer;
+        text-decoration-line: none;
+    }
+}
+
+// станица modal-3
+.modal {
+    &__creditcards,
+    &__creditcard,
+    &__cvv,
+    &__expirationdate {
+        display: flex;
+    }
+    &__creditcard,
+    &__cvv,
+    &__expirationdate {
+        flex-direction: column;
+    }
+    &__cvv,
+    &__year-select {
+        margin-left: 40px;
+    }
+    &__creditcard-input,
+    &__cvv-input,
+    &__month-select,
+    &__year-select {
+        border: 1px solid $Black;
+        border-radius: 5px;
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 150%;
+    }
+    &__creditcard-input {
+        width: 442px;
+        height: 65px;
+    }
+    &__cvv-input {
+        width: 198px;
+        height: 65px;
+    }
+    &__date {
+        margin-bottom: 100px;
+    }
+    &__month-select,
+    &__year-select {
+        width: 201px;
+        height: 65px;
+    }
+    &__completebtn {
+        width: 359px;
+        height: 74px;
+        background: $Orange;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $White;
+        transition: all 0.5s;
+        
+        position: relative;
+        left: 220px;
+    }
+    &__completebtn:hover {
+        cursor: pointer;
+        background: $Orange-hover;
+    }
+    .modal__completebtn::after {
+        content: "";
+        background: url(../../../assets/images/modal-arrow.png);
+        width: 25px;
+        height: 22px;
+        margin-left: 10px;
+      }
+}

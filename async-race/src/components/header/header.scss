@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  height: 70px;
+
+  background-color: #313940;
+
+  &-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  &__title {
+    width: 50%;
+
+    color: #cbd5de;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 50%;
+
+  margin: 0 auto;
+
+  &__garage,
+  &__winners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 30px;
+
+    margin: 0 1rem;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    color: #cbd5de;
+
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  &__garage:hover,
+  &__winners:hover {
+    background-color: #cbd5de;
+    border: 1px solid #cbd5de;
+
+    color: #313940;
+  }
+}

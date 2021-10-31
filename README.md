@@ -1,2 +1,7 @@
-# nifropp-JSFE2021Q1
-Private repository for @nifropp
+- Wildlife: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/wildlife/
+- Virtual Piano: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/virtual-piano/
+- Online ZOO: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/online-zoo/pages/landing/
+- Photo Filter: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/photo-filter/
+- Async Race: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/async-race/
+- Presentation: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/presentation/
+- English for Kids: https://rolling-scopes-school.github.io/nifropp-JSFE2021Q1/english-for-kids/

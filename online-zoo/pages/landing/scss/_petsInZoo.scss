@@ -1,0 +1,420 @@
+@import "variables";
+
+// стили для блока Звери в Зоо (Pets in Zoo)
+.pets-in-zoo {
+
+    &__title {
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $Turquoise;
+        margin: 100px 0 30px 0;
+    }
+
+    &__subtitle {
+        width: 830px;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 130%;
+        text-align: center;
+        margin: 0 auto 100px;
+    }
+    
+    &__cards {
+        width: 1660px;
+        height: 100%;
+
+        overflow: hidden;
+
+        display: flex;
+        flex-wrap: nowrap;
+        margin: -20px;
+        margin-top: 20px;
+
+    }
+    
+    &__card {
+        width: 440px;
+        height: 747px;
+        background: $Navy;
+        position: relative;
+        border-radius: 5px;
+
+        transition: transform 1s;
+
+        margin: 20px;
+
+
+        & img {
+            border-radius: 5px;
+        }
+
+        &-name {
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                height: 60px;
+                background: $Navy;
+                border-radius: 5px 0px;
+    
+                color: $White;
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 130%;
+                padding: 12px 20px;
+        }
+
+        &-image {
+            width: 440px;
+            height: 436px;
+        }
+
+        &-content {
+            flex-direction: column;
+
+            &-title {
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 130%;
+                text-align: center;
+                color: $White;
+                margin: 30px 0 0 0;
+            }
+
+            &-subtitle {
+                font-size: 18px;
+                line-height: 150%;
+                text-align: center;
+                color: $White;
+                margin: 20px 0 30px 0;
+                padding: 0 44px;
+            }
+
+            &-btns {
+                width: 440px;
+                height: 123px;
+            }
+
+            &-btn {
+                position: absolute;
+                left: 100px;
+                top: 624px;
+            }
+        }
+    }
+
+        
+
+    &__card:hover {
+        display: inline;
+        cursor: pointer;
+        transform: scale((40/440 + 1),(40/747 + 1));
+    }
+
+    &__card-content,
+    &__favourite {
+        display: flex;
+
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 5px;
+
+            &-link {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                text-transform: uppercase;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                        
+            &-text {
+                margin: auto 10px auto 0;
+            }
+        }
+    }
+
+    &__favourite {
+        margin: 100px auto 150px auto;
+        justify-content: center;
+        
+        &-btn {
+            flex-direction: row;
+            width: 359px;
+            height: 74px;
+            border: 1px solid $Navy;
+
+            &-link {
+                color: $Navy;
+            }
+
+            &-arrow {
+                fill: $Navy;
+            }
+        }
+
+        &-btn:hover {
+            background: $Navy;
+            transition: 0.5s;
+
+            .pets-in-zoo__favourite-btn-text {
+                color: $White;
+            }
+            .pets-in-zoo__favourite-btn-arrow {
+                fill: $White;
+            }
+        }
+
+    }
+
+    &__slider-btns {
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .pets-in-zoo--page .content {
+        width: 1200px;
+    }
+
+    .pets-in-zoo {
+
+        &__title {
+            margin: 100px 0 30px 100px;
+        }
+
+        &__subtitle {
+            margin: 0 auto 104px;
+        }
+        
+        &__slider-btns {
+            margin: 0 auto;
+        }
+    
+        &__cards {
+            margin: 0 0 0 20px;
+            width: 1180px;
+        }
+
+        &__card {
+            width: 455px;
+            height: 716px;
+            margin: 10px 0 10px 20px;
+            transition: all ease 0.5s;
+
+            &-image,
+            &-image img {
+                width: 455px;
+                height: 436px;
+            }
+
+            &-content {
+
+                &-title {
+                    margin: 15px 0 0 0;
+                }
+
+                &-btns {
+                    display: block;
+                }
+
+                &-btn {
+                    margin: -15px 0 0 0;
+
+                }
+
+            }
+
+        }
+
+        &__card:hover {
+            transform: scale((20/455 + 1), (20/716 + 1));
+        }
+    
+
+        &__slider-btns {
+            margin: 0 auto 20px;
+        }
+
+        &__favourite {
+            margin: 30px auto 150px;
+        }
+
+    }
+
+    // section.pets-in-zoo--page > div > div:nth-child(3) > div:nth-child(1),
+    // section.pets-in-zoo--page > div > div:nth-child(3) > div:nth-child(2),
+    // section.pets-in-zoo--page > div > div:nth-child(3) > div:nth-child(3),
+    // section.pets-in-zoo--page > div > div:nth-child(3) > div:nth-child(4) {
+    //     margin: 10px 0 20px 10px;
+    // }
+
+}
+
+@media (max-width: 1199px) {
+
+    .pets-in-zoo--page .content {
+        width: 640px;
+    }
+
+    .pets-in-zoo {
+
+        &__title {
+            width: 394px;
+            margin: 100px auto 30px auto;
+        }
+
+        &__subtitle {
+            width: 600px;
+            height: 100%;
+            line-height: 133%;
+            margin: 0 auto 50px;
+        }
+    
+        &__slider-btns {
+            display: none;
+        }
+
+        &__favourite {
+            width: 345px;
+        }
+
+        &__cards {
+            width: 620px;
+            height: 100%;
+            margin: 0px;
+        }
+    
+        &__card {
+            width: 290px;
+            height: 600px;
+            margin: 10px;
+    
+            & img {
+                width: 290px;
+                height: 333px;
+            }
+            
+            &-image {
+                width: 290px;
+                height: 333px;
+            }
+    
+            &-content {
+    
+                &-title {
+                    margin: 15px 0 0 0;
+                }
+    
+                &-subtitle {
+                    font-size: 18px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: $White;
+                    margin: 15px 0 20px 0;
+                    padding: 0 24px;
+                }
+    
+                &-btns {
+                    width: 440px;
+                    height: 123px;
+                }
+    
+                &-btn {
+                    left: 25px;
+                    top: 536px;
+                }
+            }
+        }
+
+        &__card:hover {
+            transform: scale((20/290 + 1),(20/600 + 1));
+        }
+
+        &__favourite {
+            margin: 32px auto 100px;
+        }
+        
+    }
+
+    .pets-in-zoo--page > div > div:nth-child(2),
+    .pets-in-zoo__cards > div:nth-child(1),
+    .pets-in-zoo__cards > div:nth-child(4) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .pets-in-zoo--page .content {
+        width: 320px;
+    }
+
+    .pets-in-zoo {
+
+        &__title {
+            width: 320px;
+            font-size: 26px;
+            line-height: 32px;
+            margin: 50px auto 30px auto;
+        }
+
+        &__subtitle {
+            width: 300px;
+            height: 182px;
+            font-size: 18px;
+            line-height: 150%;
+            margin: 0 auto 30px;
+        }
+
+        &__cards {
+            width: 320px;
+            height: 100%;
+            margin: 0 0 64px 0;
+        }
+
+        &__card {
+            width: 300px;
+            height: 600px;
+    
+            & img {
+                width: 300px;
+                height: 333px;
+            }
+            
+            &-image {
+                width: 300px;
+                height: 333px;
+            }
+
+        }
+
+        &__card:hover {
+            transform: scale((20/300 + 1),(20/600 + 1));
+        }
+
+        &__favourite {
+            display: none;
+        }
+
+    }
+
+    section.pets-in-zoo--page > div > div:nth-child(3) > div:nth-child(2) {
+        margin: 0 0 0 10px;
+    }
+
+    .pets-in-zoo__cards > div:nth-child(3) {
+        display: none;
+    }
+
+}

@@ -1,0 +1,323 @@
+@import "../../../landing/scss/variables";
+
+// стили для карточки с описанием Панды
+.zoos-panda {
+
+    &__card {
+        position: relative;
+        bottom: 848px;
+
+        &-text {
+            margin: 150px 0 147px 240px;
+
+            width: 1040px;
+            height: 269px;    
+            box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+    
+            &-title {
+                font-weight: 500;
+                font-size: 42px;
+                line-height: 51px;
+                text-align: center;
+                text-transform: uppercase;
+                color: $Turquoise;
+    
+                margin: 46px 0 20px 0;
+            }
+    
+            &-subtitle {
+                width: 919px;
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 130%;
+                text-align: center;
+            }
+        }
+
+        &-content {
+    
+            &-image {
+                position: relative;
+                left: 720px;
+            }
+
+            &-text {
+                width: 1160px;
+                font-size: 18px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+
+                margin: 50px 0 150px 0;
+            }
+
+            &-lists {
+                position: absolute;
+            }
+
+            &-list {
+                margin: 0 0 20px 0;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &-title {
+                    position: relative;
+                    top: 2px;
+                    font-size: 18px;
+                    line-height: 150%;
+
+                    padding: 0 20px 0 0;
+                }
+
+                &-subtitle {
+
+                    &-1 {
+                        font-weight: 500;
+                        font-size: 26px;
+                        line-height: 130%;
+                    }
+
+                    &-2 {
+                        padding: 0 0 0 20px;
+                    }
+                }
+
+                &-1 {
+                    margin: 0 0 25px 0;
+                }
+
+                &-2 {
+                    margin: 1px 0 0 0;
+                }
+
+                &-btn {
+                    position: relative;
+                    top: 5px;
+                    right: 13px;
+                }
+
+            }    
+        }
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .zoos-panda {
+
+        &__card {
+    
+            &-text {
+                width: 930px;
+                margin: 100px auto;
+
+                &-title {
+                    margin: 30px 0 20px 0;
+                }
+
+                &-subtitle {
+                    width: 740px;
+                    height: 100%;
+                    margin: 0 0 30px 0;
+                }
+    
+            }
+
+            &-content {
+                width: 1120px;
+                margin: 0 auto;
+
+                &-image {
+                    width: 455px;
+                    height: 455px;
+                    left: 705px - 40px;
+                }
+
+                &-text {
+                    width: 1120px;
+                    margin: 50px 0 92px 0;
+                }
+    
+            }
+    
+        }
+
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .zoos-panda {
+
+        &__card {
+            position: relative;
+            top: -393px;
+
+            &-text {
+                width: 600px;
+                height: 100%;
+                margin: 80px auto 77px;
+
+                &-title {
+                    margin: 24px auto 30px auto;
+                }
+
+                &-subtitle {
+                    width: 540px;
+                    height: 100%;
+                    margin: 0 0 50px 0;
+                }
+
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                width: 640px;
+
+                &-info {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+
+                &-image {
+                    width: 600px;
+                    height: 600px;
+                    left: 20px;
+                    margin: 0 0 78px 0;
+                }
+
+                &-lists {
+                    position: static;
+                    padding: 0 0 0 19px;
+                }
+
+                &-list {
+                    margin: 0 0 18px 0;
+
+                    &-btn {
+                        height: 40px;
+                    }
+                }
+
+                &-text {
+                    width: 600px;
+                    margin: 51px auto 100px auto;
+                    line-height: 156%;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 639px) {
+
+    .zoos-panda {
+
+        &__card {
+            position: relative;
+            top: -292px;
+
+            &-text {
+                width: 300px;
+                margin: 50px auto;
+
+                &-title {
+                    font-size: 26px;
+                    line-height: 32px;
+                    margin: 30px auto 22px;
+                }
+
+                &-subtitle {
+                    width: 280px;
+                    height: 100%;
+                    font-size: 18px;
+                    line-height: 150%;
+                    margin: 0 auto 50px auto;
+                }
+
+            }
+
+            &-content {
+                width: 320px;
+
+                &-info {
+                    width: 320px;
+                }
+
+
+                &-image {
+                    width: 320px;
+                    height: 320px;
+                    left: 0;
+                    margin: 0;
+                }
+
+                &-lists {
+                    width: 300px;
+                    margin: 50px auto 134px auto;
+                    padding: 0;
+                }
+
+                &-list {
+                    margin: 0;
+
+                    &-title {
+                        padding: 0;
+                    }    
+
+                    &-subtitle {
+
+                        &-1 {
+                            display: block;
+                            font-weight: 500;
+                            font-size: 26px;
+                            line-height: 130%;
+                            padding: 20px 0 0 0;
+                        }
+    
+                        &-2 {
+                            padding: 5px 0 0 0;
+                        }
+
+                    }
+                    
+                    &-1 {
+                        margin: 0;
+                    }
+    
+                    &-2 {
+                        margin: 0;
+                    }
+
+                    &-btn {
+                        position: absolute;
+                        top: 1340px;
+                        left: 40px;
+                    }    
+
+                }
+
+                &-text {
+                    width: 300px;
+                    margin: 0 auto 80px auto;
+                }
+
+            }
+
+        }
+
+    }
+
+}

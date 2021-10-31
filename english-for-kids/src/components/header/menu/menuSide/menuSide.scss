@@ -1,0 +1,51 @@
+.menu {
+  display: block;
+
+  width: 12rem;
+  height: 45%;
+
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  margin: 0;
+  padding: 7rem 0 0 2rem;
+
+  visibility: hidden;
+
+  color: #313940;
+  background-color: rgb(0, 204, 255, 0.9);
+
+  font-size: 2rem;
+  z-index: 7;
+  transition: 0.5s;
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__item-name {
+    cursor: pointer;
+
+    color: #313940;
+    text-decoration: none;
+    opacity: 1;
+
+    transition: 0.5s;
+  }
+
+  &__item-name:hover {
+    color: #cbd5de;
+  }
+}
+
+.menu > :first-child {
+  list-style-type: none;
+}
+
+.menu__item.open-section {
+  text-decoration: underline;
+  .menu__item-name {
+    color: #ffffff;
+  }
+}

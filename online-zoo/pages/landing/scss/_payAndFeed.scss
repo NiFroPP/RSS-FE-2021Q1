@@ -1,0 +1,399 @@
+@import "variables";
+
+// стили для блока Оплатить и кормить (PAY AND FEED)
+.pay-and-feed-page {
+    background: $Navy;
+    width: 100%;
+}
+
+.pay-and-feed {
+    margin: 100px 0 0 0;
+
+    &__title {
+        padding: 91px 0 0 0;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-transform: uppercase;
+        color: $White;
+    }
+
+    &__number {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+        color: $White;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 130%;
+        &-line {
+            width: 1260px;
+            height: 0px;
+            border-top: 1px solid $White;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: row;
+        margin: 82px 0 0 0;
+
+        &-image {
+
+            &-01,
+            &-02,
+            &-03 {
+                width: 560px;
+                height: 364px;
+                border-radius: 5px;
+            }
+
+            &-01 {
+                background: url("../../../assets/images/monkey-1.png");
+            }
+            &-02 {
+                background: url("../../../assets/images/banana.png");
+            }
+            &-03 {
+                background: url("../../../assets/images/monkey-2.png");
+            }
+        }
+
+        &-content {
+            margin: 20px 0 0 160px;
+
+            &-title {
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 130%;
+                color: $White;
+                margin: 30px 0 0 0;
+                width: 502px;
+            }
+            &-subtitle {
+                width: 560px;
+                font-size: 18px;
+                line-height: 150%;
+                color: $White;
+                margin: 50px 0 0 0;
+            }
+            &-btn {
+                margin: 50px 0 100px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .pay-and-feed-page .content {
+        width: 1120px;
+    }
+
+    .pay-and-feed {
+
+        &__title {
+            padding: 150px 0 0 60px;
+        }
+
+        &__number {
+
+            &-line {
+                width: 1025px;
+            }
+
+        }
+    
+        &__card {
+            margin: 107px 0 0 0;
+
+            &-image {
+    
+                &-01,
+                &-02,
+                &-03 {
+                    width: 550px;
+                    height: 358px;
+                }
+
+            }
+
+            &-content {
+                width: 550px;
+                margin: -42px 0 0 20px;
+
+                &-title {
+                    margin: 30px 0 0 25px;
+                }
+
+                &-logo,
+                &-title {
+                    text-align: center;
+                }
+
+                &-subtitle {
+                    width: 550px;
+                    margin: 30px 0 0 15px;
+                }
+
+                &-btn {
+                    margin: 118px 0 100px 0;
+                }
+            }
+
+        }
+
+        &-page > div > section:nth-child(3),
+        &-page > div > section:nth-child(4) {
+            margin: 82px 0 0 0;
+
+            & > div.pay-and-feed__card {
+                margin: 64px 0 0 0;
+
+                & > div.pay-and-feed__card-content {
+                    margin: 22px 0 0 20px;
+                }
+            }
+
+        }
+
+        &-page > div > section:nth-child(4) {
+            margin: 80px 0 0 0;
+        }
+
+    }
+
+    .BTN__donate-now {
+        width: 266px;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .pay-and-feed-page .content {
+        width: 640px;
+    }
+
+    .pay-and-feed {
+        margin: 50px 0 0 0;
+
+        &__title {
+            padding: 80px 0 0 100px;
+        }
+
+        &__number {
+
+            & > span:nth-child(1) {
+                margin: 0 0 0 20px;
+            }
+
+            & > span:nth-child(2) {
+                width: 557px;
+                margin: 0 20px 0 0;
+            }
+
+        }
+
+        &__card {
+            flex-direction: column;
+            margin: 50px 0 0 0;
+
+            &-image {
+
+                &-01,
+                &-02,
+                &-03 {
+                    width: 640px;
+                    height: 417px;
+                }
+
+                &-01 {
+                    background: url("../../../assets/images/monkey-1-640.png");
+                }
+                &-02 {
+                    background: url("../../../assets/images/banana-640.png");
+                }
+                &-03 {
+                    background: url("../../../assets/images/monkey-2-640.png");
+                }
+    
+            }
+
+
+            &-content {
+                width: 600px;
+                margin: 50px auto 0;
+
+                &-title {
+                    width: 600px;
+                    line-height: 135%;
+
+                    margin: 30px auto;
+                }
+
+                &-subtitle {
+                    width: 600px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                &-btn {
+                    width: 290px;
+                    height: 74px;
+                    margin: 53px auto 100px;
+                }
+    
+            }
+    
+        }
+
+        &-page > div > section:nth-child(3),
+        &-page > div > section:nth-child(4) {
+            margin: 49px 0 0 0;
+
+            & > div.pay-and-feed__card {
+                margin: 50px 0 0 0;
+            }
+
+            & > div.pay-and-feed__card > div.pay-and-feed__card-content {
+                margin: 50px 0 0 20px;
+            }
+        }
+
+    }
+
+    .BTN__donate-now {
+        width: 290px;
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .pay-and-feed-page .content {
+        width: 320px;
+    }
+
+    .pay-and-feed {
+        margin: 45px 0 0 0;
+
+        &__title {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            padding: 20px 0 0 60px;
+        }
+
+        &__number {
+
+            & > span:nth-child(1) {
+                margin: 0 0 0 10px;
+            }
+
+            & > span:nth-child(2) {
+                width: 267px;
+                margin: 0;
+            }
+
+        }
+
+        &__card {
+            flex-direction: column;
+            margin: 30px 0 0 0;
+
+            &-image {
+
+                &-01,
+                &-02,
+                &-03 {
+                    width: 320px;
+                    height: 208px;
+                }
+
+                &-01 {
+                    background: url("../../../assets/images/monkey-1-320.png");
+                }
+                &-02 {
+                    background: url("../../../assets/images/banana-320.png");
+                }
+                &-03 {
+                    background: url("../../../assets/images/monkey-2-320.png");
+                }
+    
+            }
+
+            &-content {
+                width: 300px;
+                margin: 30px auto 0;
+
+                &-title {
+                    width: 300px;
+                    line-height: 135%;
+                    margin: 30px auto 29px;
+                }
+
+                &-subtitle {
+                    width: 300px;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    &-excess {
+                        display: none;
+                    }
+                }
+
+                &-btn {
+                    width: 300px;
+                    height: 45px;
+                    margin: 41px auto 90px;
+                }
+    
+            }
+
+        }
+
+        &-page > div > section:nth-child(3) {
+            margin: 43px 0 0 0;
+
+            & > div.pay-and-feed__card {
+                margin: 30px 0 0 0;
+            }
+
+            & > div.pay-and-feed__card > div.pay-and-feed__card-content {
+                margin: 30px 0 0 10px;
+            }
+
+        }
+
+        &-page > div > section:nth-child(4) {
+            margin: 48px 0 0 0;
+
+            & > div.pay-and-feed__card {
+                margin: 30px 0 0 0;
+            }
+
+            & > div.pay-and-feed__card > div.pay-and-feed__card-content {
+                margin: 30px 0 0 10px;
+            }
+
+        }
+
+
+
+        &-page > div > section:nth-child(2) > div.pay-and-feed__card > div.pay-and-feed__card-content > div.pay-and-feed__card-content-subtitle {
+            width: 280px;
+        }
+
+    }
+
+    .BTN__donate-now {
+        width: 300px;
+        height: 45px;
+
+        &-text {
+            text-transform: uppercase;
+        }
+    }
+}

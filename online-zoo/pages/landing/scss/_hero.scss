@@ -1,0 +1,183 @@
+@import "variables.scss";
+
+// стили для титульной страницы (hero)
+.hero {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 790px;
+    margin: 0 auto;
+    background: url('../../../assets/images/hero-background.jpg');
+    background-repeat:no-repeat;
+    background-position:0 -41px;
+
+    &__title {
+        width: 890px;
+        height: 280px;
+        font-size: 40px;
+        font-weight: 800;
+        font-size: 82px;
+        line-height: 100px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: $Turquoise;
+        position: absolute;
+        top: 239px - 110px;
+    }
+
+    &__subtitle {
+        width: 430px;
+        height: 76px;
+        font-size: 18px;
+        line-height: 150%;
+        position: absolute;
+        top: 569px - 110px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 585px;
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .header-content.content {
+        width: 1000px;
+    }
+
+    .hero {
+        width: 1200px;
+        height: 690px;
+        background: url('../../../assets/images/hero-background-1200.jpg');
+        background-position: 0 -35px;
+
+        & .content {
+            width: 1200px;
+        }
+
+        &__title {
+            position: static;
+            padding: 100px 0 0 40px;
+        }
+
+        &__subtitle {
+            width: 339px;
+            height: 76px;
+            position: static;
+            margin: 130px 0 30px 40px;
+        }
+
+        &__btn {
+            position: static;
+            margin: 30px 0 0 40px;
+        }
+    
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .header-content.content {
+        width: 580px;
+    }
+
+    .hero {
+        width: 640px;
+        height: 754px;
+        background: no-repeat url('../../../assets/images/hero-background-640.jpg');
+        background-position: bottom;
+        padding-top: 110px;
+        
+        & .content {
+            width: 600px;
+            height: 644px;
+        }
+
+        &__title {
+            width: 600px;
+            height: 100%;
+            font-size: 72px;
+            line-height: 88px;
+            letter-spacing: 0.01em;
+            padding: 50px 0 0 0;
+        }
+
+        &__subtitle {
+            width: 339px;
+            height: 76px;
+            position: absolute;
+            top: 524px;
+            margin: 0;
+        }
+
+        &__btn {
+            position: absolute;
+            top: 630px;
+            margin: 0;
+        }
+
+    }
+
+    .BTN__view-live-cam {
+        width: 285px;
+        height: 74px;
+     }
+
+}
+
+@media (max-width: 639px) {
+
+    .header-content.content {
+        width: 264px;
+    }
+
+    .hero {
+        width: 320px;
+        height: 794px;
+        background: no-repeat url('../../../assets/images/hero-background-320.jpg');
+        background-position: bottom;
+
+        & .content {
+            width: 320px;
+            height: 100%;
+        }
+
+        &__title {
+            width: 300px;
+            height: 186px;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 49px;
+            padding: 0;
+            margin: 20px auto;
+        }
+
+        &__subtitle {
+            width: 300px;
+            height: 106px;
+            position: absolute;
+            top: 336px;
+            left: 10px;
+        }
+
+        &__btn {
+            position: absolute;
+            top: 471px;
+            left: 10px;
+        }
+
+    }
+
+    .BTN__view-live-cam {
+        width: 300px;
+        height: 45px;
+
+        &-text {
+            text-transform: uppercase;
+        }
+     }
+
+
+}

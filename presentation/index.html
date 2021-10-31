@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<a href="https://reactjs.org/">
+						<img src="./images/react-logo.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h2 style="color: var(--r-link-color);">React</h2>
+					<h3>A JavaScrript library for building user interfaces</h3>
+					<p>
+						<small>Created by <a href="https://github.com/NiFroPP">Nick Frolov</a></small>
+					</p>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title" style="color: var(--r-link-color);">Why do choose React?</h2>
+					<ul>
+						<li>Declarative approach to describing interfaces</li>
+						<li>Clear syntax</li>
+						<li>Correct learning curve</li>
+						<li>Data binding mechanism</li>
+						<li>Functional approach to development</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title" style="color: var(--r-link-color);">The setup</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						&lt;html&gt;
+						&lt;head&gt;
+							<script 
+								src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+							<script 
+								src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>  
+							<script 
+								src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>  
+						&lt;/head&gt;
+						&lt;body&gt; 
+							<div id="root"></div>  
+							<script type="text/babel">  
+								/* ADD REACT CODE HERE */  
+							</script>  
+						&lt;/body&gt; 
+						&lt;/html&gt;
+					</code></pre>
+				</section>
+				
+				<section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Components</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							class Hello extends React.Component {  
+								render() {  
+										return <h1>Hello world!</h1>;  
+								}  
+						}
+						</code></pre>
+					</section>
+	
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Components</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							ReactDOM.render(  
+									&lt;Hello /&gt;,   
+									document.getElementById("root")  
+							);
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Components</h2>
+							<img src="./images/hello-world.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</section>
+	
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title" style="color: var(--r-link-color);">Handling data</h2>
+					<ul>
+						<li>props</li>
+						<li>state</li>
+					</ul>
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Props</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							ReactDOM.render(  
+								&lt;Hello message="my friend" /&gt;,   
+								document.getElementById("root")  
+							);
+						</code></pre>
+					</section>
+	
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Props</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							class Hello extends React.Component {  
+								render() {  
+									return <h1>Hello {this.props.message}!</h1>;  
+								}  
+							}					
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Props</h2>
+							<img src="./images/hello-my-friend.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</section>
+	
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Initializing state</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							class Hello extends React.Component {  
+				
+								constructor(){  
+									super();  
+									this.state = {  
+										message: "my friend (from state)!"  
+									};  
+								}  
+									
+								render() {  
+									return <h1>Hello {this.state.message}!</h1>;  
+								}  
+							}					
+					</code></pre>
+					</section>
+	
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Changing the state</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							class Hello extends React.Component {  
+				
+								constructor(){  
+									super();  
+									this.state = {  
+											message: "my friend (from state)!"  
+									};  
+									this.updateMessage = this.updateMessage.bind(this);   
+							 }
+						
+							 updateMessage() {  
+									this.setState({  
+										message: "my friend (from changed state)!"  
+									});  
+								}
+						
+								render() {  
+									return <h1>Hello {this.state.message}!</h1>;  
+								}  
+							}				
+						</code></pre>
+					</section>
+	
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Event Handlers</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							render() {  
+								return (  
+									 <div>  
+										 <h1>Hello {this.state.message}!</h1>  
+										 <button onClick={this.updateMessage}>Click me!</button>  
+									 </div>     
+								)  
+							}					</code></pre>
+					</section>
+	
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Event Handlers</h2>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							class Hello extends React.Component {  
+				
+								constructor(){  
+									super();  
+									this.state = {  
+											message: "my friend (from state)!"  
+									};  
+									this.updateMessage = this.updateMessage.bind(this);  
+								}
+						
+								updateMessage() {  
+									this.setState({  
+										message: "my friend (from changed state)!"  
+									});  
+								}
+						
+								render() {  
+									return (  
+										<div>  
+											<h1>Hello {this.state.message}!</h1>  
+											<button onClick={this.updateMessage}>Click me!</button>  
+										</div>     
+									)  
+								}  
+							}					
+					</code></pre>
+					</section>
+	
+					<section data-auto-animate>
+						<h2 data-id="code-title" style="color: var(--r-link-color);">Event Handlers</h2>
+							<img src="./images/hello-my-fried-click-me.gif" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</section>
+	
+				</section>
+
+				<section>
+					<a href="https://reactjs.org/">
+						<img src="./images/react-logo.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h2 style="color: var(--r-link-color);">React</h2>
+					<h3>A JavaScrript library for building user interfaces</h3>
+					<p>
+						<small>Created by <a href="https://github.com/NiFroPP">Nick Frolov</a></small>
+					</p>
+					<ul style="list-style-type: none;"><small>Created by help articles:</small>
+						<li><small><a href="https://developer.mozilla.org/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">https://developer.mozilla.org/</a></small></li>
+						<li><small><a href="https://habr.com/ru/company/ruvds/blog/428077/">https://habr.com/</a></small></li>
+						<li><small><a href="https://www.freecodecamp.org/news/learn-react-js-in-5-minutes-526472d292f4/">https://www.freecodecamp.org/</a></small></li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

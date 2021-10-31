@@ -1,0 +1,58 @@
+.menu {
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+  &__checkbox {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    position: fixed;
+    cursor: pointer;
+
+    opacity: 0;
+
+    margin: 0;
+    z-index: 100;
+  }
+  &__checkbox:checked ~ .menu__top {
+    background-color: #cbd5de;
+    transform: rotate(45deg) translate(14px);
+  }
+
+  &__checkbox:checked ~ .menu__center {
+    background-color: #cbd5de;
+    transform: rotate(495deg) translate(1px);
+  }
+
+  &__checkbox:checked ~ .menu__bottom {
+    background-color: #cbd5de;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  &__top,
+  &__center,
+  &__bottom {
+    width: 40px;
+    height: 4px;
+
+    margin: 4px 0;
+
+    background: #0cf;
+    border-radius: 4px;
+
+    transition: all 0.5s;
+    z-index: 10;
+  }
+  &__top {
+    transform-origin: 12px -10px;
+  }
+  &__bottom {
+    transform-origin: bottom right;
+  }
+}
