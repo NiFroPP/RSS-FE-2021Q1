@@ -1,0 +1,471 @@
+@import "variables.scss";
+
+// стили для блока Выбери себе фаворита (choose your favourite)
+.your-favourite {
+
+    & .content > input{
+        display: none;
+    }
+
+    &__title {
+        width: 655px;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-transform: uppercase;
+        color: $Turquoise;
+        margin: 0 auto;
+        padding: 136px 0 0 0;
+        text-align: center;
+    }
+
+    &__subtitle {
+        width: 537px;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 130%;
+        color: $Navy;
+        margin: 50px auto 100px auto;
+        text-align: center;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -20px;
+    }
+
+    &__main-image {
+        width: 920px;
+        height: 658px;
+        background: url("../../../assets/images/your-favourite-koala.png");
+        margin: 20px;
+        border-radius: 5px;
+    }
+        
+    &__card {
+        width: 440px;
+        height: 658px;
+        background: $Navy;
+        border-radius: 5px;
+        margin: 20px;
+
+        transition: transform 1s;
+
+        & img {
+            border-radius: 5px;
+        }
+
+        &-image-panda,
+        &-image-tiger,
+        &-image-lemur,
+        &-image-eagles {
+            width: 440px;
+            height: 373px;
+            border-radius: 5px;
+        }
+
+        &-image {
+
+            &-panda {
+                background: url("../../../assets/images/your-favourite-panda.png");
+            }
+
+            &-tiger {
+                background: url("../../../assets/images/your-favourite-tiger.png");
+            }
+
+            &-lemur {
+                background: url("../../../assets/images/your-favourite-lemur.png");
+            }
+
+            &-eagles {
+                background: url("../../../assets/images/west-end-bald-eagles.png");
+            }
+
+        }
+
+        &-text {
+            width: 390px;
+            height: 255px;
+            margin: 30px auto 0 auto;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            color: $White;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-title {
+            margin: 0 0 50px 0;
+        }
+
+        &-btn {
+            margin: 0 auto;
+        }
+    }
+
+    &__card:hover {
+        cursor: pointer;
+        transform: scale((40/440 + 1), (40/658 + 1));
+    }
+
+    &__btn {
+        margin: 100px auto 0 auto;
+    }
+    
+    &__touch-animal {
+        width: 1400px;
+        height: 652px;
+        background: url("../../../assets/images/touch-animal.png");
+        margin: 150px auto;
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .your-favourite .content {
+        width: 1200px;
+    }
+
+    .your-favourite {
+
+        &__title {
+            width: 590px;
+            padding: 150px 0 0 0;
+            margin: 0 0 0 330px;
+        }
+
+        &__subtitle {
+            margin: 32px 0 50px 390px;
+        }
+
+        &__main-image {
+            width: 930px;
+            height: 470px;
+            background: url("../../../assets/images/your-favourite-koala-1200.png");
+            margin: 0 20px 10px 20px;
+        }
+
+        &__cards {
+
+            width: 1200px;
+            justify-content: center;
+            margin: 0;
+            
+            & > div:nth-child(3) {
+                order: 1;
+            }
+
+            & > div:nth-child(5) {
+                order: 1;
+            }
+
+        }
+
+        &__card {
+            width: 455px;
+            height: 641px;
+            margin: 10px;
+
+            &-image-panda,
+            &-image-tiger,
+            &-image-lemur,
+            &-image-eagles {
+                width: 455px;
+                height: 373px;
+                border-radius: 5px;
+                background-size: cover;
+            }
+
+            &-text {
+                width: 400px;
+                height: 200px;
+            }
+
+            &-title {
+                margin: 0 0 40px 0;
+            }
+
+        }
+    
+        &__card:hover {
+            transform: scale((20/455 + 1), (20/641 + 1));
+        }    
+
+        &__touch-animal {
+            width: 1200px;
+            height: 668px;
+            background: url("../../../assets/images/touch-animal-1200.png");
+
+        }    
+    
+    }
+
+    .your-favourite__card.your-favourite__slide2 > div.your-favourite__card-text > div.your-favourite__card-title {
+        margin: 0 0 60px 0;
+    }
+
+    section.your-favourite > div > a {
+        margin: 82px auto 0 auto;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .your-favourite .content {
+        width: 640px;    
+    }
+
+    .your-favourite {
+
+        &__title {
+            width: 600px;
+            padding: 0;
+            margin: 62px auto 30px;
+        }
+
+        &__subtitle {
+            width: 600px;
+            margin: 0 auto 70px;
+        }
+
+        &__main-image {
+            display: none;        
+        }
+
+        &__cards {
+            width: 640px;
+            height: 297px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        &__card,
+        &__card > a {
+            width: 600px;
+            height: 297px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__card {
+            opacity: 0;
+            position: absolute;
+            z-index: 0;
+            transition: all ease-in-out 0.5s;
+            margin: 0 20px;
+
+            &-image-panda,
+            &-image-tiger,
+            &-image-lemur,
+            &-image-eagles {
+                width: 300px;
+                height: 297px;
+                background-position: right;
+                background-size: cover;
+                margin: 0;
+            }
+
+            &-text {
+                width: 300px;
+                height: 103px;
+                margin: 0;
+            }
+    
+            &-title {
+                width: 260px;
+                margin: 66px auto 0;
+            }
+
+            &-btn {
+                margin: 40px auto 0;
+            }
+    
+        }
+
+        &__controls {
+            width: 108px;
+            position: relative;
+            left: 274px;
+            top: 44px;
+        }
+
+        &__controls label {
+            width: 8px;
+            height: 8px;
+            position: relative;
+
+            cursor: pointer;
+            display: inline-block;
+            margin: 0px 16px 0 0;
+            border-radius: 50%;
+            transition: all ease-in-out 0.5s;
+        }
+
+        &__controls label:after {
+            border: 2px solid $Black;
+            content: " ";
+            display: block;
+            height: 12px;
+            left: -2px;
+            position: absolute;
+            top: -2px;
+            width: 12px;
+            border-radius: 50%;
+        }
+
+        &__btn {
+            margin: 92px auto 0 auto;
+        }
+
+        &__touch-animal {
+            width: 640px;
+            height: 379px;
+            background: url("../../../assets/images/touch-animal-640.png");
+            margin: 100px auto;
+
+        }    
+    
+    }
+
+    section.your-favourite > div > a {
+        margin: 94px auto 0 auto;
+    }
+
+    .your-favourite__controls label:hover, 
+    #your-favourite__slide1:checked ~ .your-favourite__controls label:nth-of-type(1),
+    #your-favourite__slide2:checked ~ .your-favourite__controls label:nth-of-type(2),
+    #your-favourite__slide3:checked ~ .your-favourite__controls label:nth-of-type(3),
+    #your-favourite__slide4:checked ~ .your-favourite__controls label:nth-of-type(4) {
+        background: $Black;
+    }
+
+    #your-favourite__slide1:checked ~ .your-favourite__cards > .your-favourite__slide1,
+    #your-favourite__slide2:checked ~ .your-favourite__cards > .your-favourite__slide2,
+    #your-favourite__slide3:checked ~ .your-favourite__cards > .your-favourite__slide3,
+    #your-favourite__slide4:checked ~ .your-favourite__cards > .your-favourite__slide4 {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .your-favourite .content {
+        width: 320px;    
+    }
+
+    .your-favourite {
+
+        &__title {
+            width: 300px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            text-align: center;
+            padding: 0;
+            margin: 50px auto 25px;
+        }
+
+        &__subtitle {
+            width: 270px;
+            height: 100%;
+            font-size: 18px;
+            line-height: 150%;
+            margin: 0 auto 27px;
+        }
+
+        &__cards {
+            width: 300px;
+            height: 570px;
+            overflow: hidden;
+            position: relative;
+            left: 10px;
+        }
+
+        &__card,
+        &__card > a {
+            width: 300px;
+            height: 570px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__card {
+            opacity: 0;
+            position: absolute;
+            z-index: 0;
+            transition: all ease-in-out 0.5s;
+
+
+            &-image-panda,
+            &-image-tiger,
+            &-image-lemur,
+            &-image-eagles {
+                width: 300px;
+                height: 351px;
+                background-position: center;
+                background-size: cover;
+                margin: 0;
+            }
+
+            &-text {
+                width: 300px;
+                height: 100px;
+                margin: 0 auto;
+            }
+    
+            &-title {
+                width: 245px;
+                margin: 16px auto 0;
+            }
+
+            &-btn {
+                margin: 0 auto 0;
+            }
+    
+        }
+
+        &__controls {
+            left: 114px;
+            top: 25px;
+        }
+
+        &__btn {
+            margin: 72px auto 0 auto;
+        }
+
+        &__touch-animal {
+            width: 320px;
+            height: 189px;
+            background: url("../../../assets/images/touch-animal-320.png");
+            margin: 80px auto;
+        }    
+
+    }
+
+    section.your-favourite > div > a {
+        margin: 72px auto 0 auto;
+    }
+
+    .BTN__choose-your-favourite {
+        width: 300px;
+        height: 45px;
+    }
+
+    .BTN__feed-transparent {
+        height: 45px;
+
+        &-text {
+            text-transform: uppercase;
+        }
+    
+    }
+
+}

@@ -1,0 +1,233 @@
+@import "variables.scss";
+
+// стили для Шапки (Header)
+.header {
+    background-color: $Orange;
+
+    &-page {
+        width: 1920px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 110px;
+    }
+
+    &__logo {
+        width: 96px;
+        height: 50px;
+
+        &-img:hover {
+            opacity: 0.5;
+            transition: 0.7s;
+        }
+    }
+
+    &__menu {
+        width: 556px;
+        margin: 0 65px 0 503px;
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            text-transform: uppercase;
+        }
+
+        &-link {
+            color: $Black;
+            transition: 0.7s;
+        }
+
+        &-link:hover {
+            color: $White;
+        }
+
+        &-link-active {
+            color: $Turquoise
+        }
+
+        &-link-active:hover {
+            opacity: 1;
+            cursor: default;
+            color: $Turquoise;
+        }
+
+    }
+
+    &__social-media-icons {
+        width: 180px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-media-icons>a:hover {
+        animation: 0.1s tremor ease-out infinite;
+    }
+
+}
+
+@keyframes tremor {
+    0%, 25% {
+        left: -1px;
+        top:-1px;
+        transform: translateX(-4%);
+        transform: translateX(-4%);
+    }
+    50%, 100% {
+        left: 1px;
+        top: 1px;
+        transform: translateX(4%);
+        transform: translateX(4%);
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 1919px) {
+    .header {
+
+        &-page {
+            width: 1200px;
+        }
+
+        &__menu {
+        width: 481px;
+        margin: 0 80px 0 163px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .header-page {
+        width: 640px;
+    }
+
+    .content.header-content {
+        width: 573px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 0 21px;
+    }
+
+    .header__social-media-icons {
+        display: none;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    // hamburger меню
+    .hamburger {
+        display: block;
+        position: relative;
+        bottom: 7px;
+    }
+
+    .checkbox {
+        overflow: hidden; 
+        height: 1px;
+        width: 1px; 
+        margin: -1px;
+        padding: 0;
+        border: 0; 
+    }
+
+    .hamburger-menu {
+        width: 30px;
+        height: 30px;
+        position: relative;
+
+        & .bar {
+            padding: 0;
+            width: 30px;
+            height: 2px;
+            background-color: $Black;
+            display: block;
+            border-radius: 4px;
+            transition: all 0.4s ease-in-out;
+            position: absolute; 
+        }
+    }
+
+    .hamburger-menu:hover {
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+
+    .bar1 {
+        top: 0;
+    }
+
+    .bar2,
+    .bar3 {
+        top: 13.5px;
+    }
+
+    .bar3 {
+        right: 0;
+    }
+
+    .bar4 {
+        bottom: 0;
+    }
+
+    .checkbox:checked + label .bar1{
+        transform: rotate(45deg);
+        transform-origin: 5%;
+        width: 41px
+    }
+
+    .checkbox:checked + label .bar2 {
+        transform: translateX(-40px);
+        background-color: transparent;
+    }
+
+    .checkbox:checked + label .bar3 {
+        transform: translateX(40px);
+        background-color: transparent;
+    }
+
+    .checkbox:checked + label .bar4 {
+        transform-origin: 5%;
+        transform: rotate(-45deg);
+        width: 41px;
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .header-page {
+        width: 320px;
+    }
+
+    .content.header-content {
+        width: 263px;
+    }
+
+}

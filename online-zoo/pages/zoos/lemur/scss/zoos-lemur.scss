@@ -1,0 +1,307 @@
+@import "../../panda/scss/zoos-panda.scss";
+
+///////////////////
+.donate__subtitle {
+    width: 919px;
+}
+.zoos-panda__card-text {
+    height: 299px;
+}
+
+.wrapper-footer {
+    top: 3306px;
+}
+
+@media (max-width: 1919px) {
+
+    .zoos {
+        width: 1200px;
+        height: 1285px;
+
+        &-panda {
+
+            &__card {
+
+                &-text {
+                    margin: 100px auto 99px;
+                }
+
+                &-content {
+
+                    &-text {
+                        margin: 63px 0 95px 0;
+                        line-height: 140%;
+                    }
+
+                }
+
+            }
+
+        }
+        
+
+    }
+
+    .donate {
+        height: 250px;
+
+        &__content,
+        &__quick-donate {
+            height: 250px;
+        }
+
+        &__title {
+            width: 645px;
+            margin-top: 13px;
+        }
+
+        &__subtitle {
+            width: 739px;
+            margin-top: 10px;
+        }
+    
+    }
+
+    .wrapper-donate {
+        height: 250px;
+    }
+
+    .wrapper-footer {
+        top: 2953px;
+    }
+
+    .SLIDER-left-n,
+    .SLIDER-right-n  {
+        margin: 0 20px;
+    }    
+
+}
+
+@media (max-width: 1199px) {
+
+    .zoos {
+        width: 640px;
+        height: 938px;
+        top: 0px;
+
+        &-panda {
+
+            &__card {
+
+                &-text {
+                    margin: 105px auto 77px;
+
+                    &-title {
+                        margin: 27px auto 30px auto;
+                    }
+                }
+
+                &-content {
+
+                    &-text {
+                        margin: 59px auto 95px auto;
+                        line-height: 150%;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .content {
+        width: 640px;
+    }
+
+    .donate {
+        flex-direction: column;
+        width: 640px;
+        height: 488px;
+
+        &__title {
+            width: 600px;
+            text-align: center;
+            margin: 50px auto 30px auto;
+        }
+
+        &__subtitle {
+            width: 599px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &__content,
+        &__quick-donate {
+            width: 640px;
+            height: 100%;
+        }
+
+        &__quick-donate-title {
+            margin: 30px auto 10px auto;
+        }
+
+        &__button {
+            width: 363px;
+            margin: 0 auto;
+
+            &-dollar {
+                width: 281px;
+
+                &-char {
+                    left: 39px;
+                }
+
+                &-text {
+                    padding: 26px 0 0 58px;
+                }
+            }
+
+        }
+    
+    }
+
+    .zoos-panda__card-text {
+        height: 100%;
+    }
+    
+    .wrapper-donate {
+        height: 488px;
+        top: 938px;
+    }
+
+    .footer-page {
+        bottom: 390px;
+    }
+
+    .wrapper-footer {
+        height: 545px;
+        top: 3583px;
+    }    
+
+}
+
+@media (max-width: 639px) {
+
+    .zoos {
+        width: 320px;
+        height: 693px;
+
+        &-panda {
+
+            &__card {
+
+                &-text {
+                    margin: 160px auto 43px auto;
+                    line-height: 150%;
+
+                }
+
+                &-content {
+
+                    &-lists {
+                        margin: 30px auto 44px auto;
+                    }
+
+                    &-text {
+                        margin: 59px auto 77px auto;
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+
+    .content {
+        width: 320px;
+    }
+
+    .donate {
+        width: 320px;
+        height: 651px;
+
+        &__title {
+            width: 300px;
+            margin: 0 auto;
+            margin: 50px auto 27px auto;
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        &__subtitle {
+            width: 300px;
+        }
+
+        &__content,
+        &__quick-donate {
+            width: 320px;
+            height: 100%;
+        }
+
+        &__quick-donate-title {
+            margin: 25px auto 10px auto;
+        }
+
+        &__button {
+            width: 300px;
+            height: 45px;
+            margin: 0 auto;
+
+            &-dollar {
+                width: 281px;
+
+                &-char {
+                    font-size: 16px;
+                    line-height: 20px;
+                    top: 12px;
+                    left: 26px;
+                }
+
+                &-text {
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 12px 0 0 48px;
+                }
+            }
+
+        }
+    
+    }
+
+    .zoos-panda {
+
+        &__card {
+
+            &-content {
+
+                &-list {
+
+                    &-btn {
+                        position: absolute;
+                        top: 1395px;
+                        left: 40px;
+                    }    
+
+                }
+            }
+        }
+    }
+
+    .footer-page {
+        bottom: 292px;
+    }
+
+    .wrapper-donate {
+        height: 651px;
+        top: 693px;
+    }
+
+    .wrapper-footer {
+        height: 710px;
+        top: 3783px;
+    }    
+
+}

@@ -1,0 +1,441 @@
+// Импорт шрифта Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+@import "../../../landing/scss/nullstyle";  // Файл обнуляющих стилей
+@import "../../../landing/scss/variables";  // Переменные 
+@import "../../../landing/scss/BTNS";  // кнопки для сайта
+
+@import "../../../landing/scss/header";  // файл шапки (header)
+@import "../../../landing/scss/footer"; // стили для блока Нижний колонтитул (footer)
+
+
+@import "sidePanel"; // боковая панель навигации по животным
+@import "./youtubePlayer"; //стили для ютюб-плеера
+@import "donate"; // стили для блока Донат (donate)
+@import "pandaCard"; // стили для карточки с описанием Панды
+
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.zoos {
+    position: relative;
+    width: 1920px;
+    height: 4320px - 850px;
+    margin: 0 auto;
+}
+
+.SLIDER-left-n,
+.SLIDER-right-n {
+    border: 1px solid $White;
+}
+
+.wrapper-donate {
+    width: 100%;
+    height: 249px;
+    background: $Navy;
+
+    position: absolute;
+    top: 1497px + 110px;
+}
+.wrapper-footer {
+    width: 100%;
+    height: 330px;
+    background: $Navy;
+
+    position: absolute;
+    top: 3146px + 110px;
+}
+
+.donate-page {
+    position: relative;
+    bottom: 849px;
+}
+.footer-page {
+    position: relative;
+    bottom: 843px;
+}
+
+.donate {
+
+    &__content,
+    &__quick-donate {
+        height: 249px;
+    }
+
+    &__subtitle {
+        width: 873px;
+    }
+}
+
+.circle-hover {
+    opacity: 0;
+    transition: 1s;
+}
+
+.circle:hover {
+    .circle-hover {
+        opacity: 1;
+    }
+}
+
+.side-bar__menu:hover {
+    cursor: pointer;
+    fill: $Orange;
+
+    .side-bar__menu-arrows {
+        fill: $Orange;
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .zoos {
+        width: 1200px;
+        height: 1285px;
+
+        &-panda {
+
+            &__card {
+
+                &-text {
+                    margin: 100px auto 96px;
+
+                    &-title {
+                        margin: 30px 0 20px 40px;
+                    }
+                }
+
+                &-content {
+
+                    &-list {
+                        margin: 0 0 18px 0;
+
+                        &-btn {
+                            height: 40px;
+                        }
+                    }
+
+                    &-text {
+                        line-height: 150%;
+                        margin: 50px 0 93px 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .content {
+        width: 1200px;
+    }
+
+    .header-content {
+        width: 1000px;
+    }
+    
+    .donate {
+        width: 1120px;
+        height: 238px;
+        margin: 0 auto;
+
+        &__content,
+        &__quick-donate {
+            height: 238px;
+        }
+    
+        &__subtitle {
+            width: 739px;
+        }
+
+        &__quick-donate-title {
+            margin: 30px 0 10px 0;
+
+        }
+    }
+
+    .wrapper-donate {
+        height: 238px;
+        top: 1285px + 110px;
+    }
+
+    .wrapper-footer {
+        height: 330px;
+        top: 2888px;
+    }   
+    
+    .SLIDER-left-n,
+    .SLIDER-right-n  {
+        margin: 0 20px;
+    }    
+    
+}
+
+@media (max-width: 1199px) {
+
+    .zoos {
+        width: 640px;
+        height: 938px;
+        top: 0px;
+
+            &-panda {
+
+                &__main {
+                    bottom: 390px;
+                }
+
+                &__card {
+
+                    &-text {
+                        margin: 78px auto 80px;
+
+                        &-title {
+                            margin: 27px 10px 30px 0px;
+                        }
+
+                    }
+
+                    &-content {
+
+                        &-text {
+                            margin: 50px auto 93px auto;
+                            line-height: 140%;
+                        }
+                    }
+                }
+            }
+
+    }
+
+    .content {
+        width: 640px;
+    }
+
+    .donate {
+        flex-direction: column;
+        width: 640px;
+        height: 515px;
+
+        &-page {
+            bottom: 394px;
+        }
+
+        &__title {
+            text-align: center;
+            margin: 40px auto 30px auto;
+        }
+
+        &__subtitle {
+            width: 599px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &__content,
+        &__quick-donate {
+            width: 640px;
+            height: 100%;
+        }
+
+        &__quick-donate-title {
+            margin: 30px auto 10px auto;
+        }
+
+        &__button {
+            width: 363px;
+            margin: 0 auto;
+
+            &-dollar {
+                width: 281px;
+
+                &-char {
+                    left: 39px;
+                }
+
+                &-text {
+                    padding: 26px 0 0 58px;
+                }
+            }
+
+        }
+    
+    }
+
+    .wrapper-donate {
+        height: 516px;
+        top: 938px;
+    }
+
+    .wrapper-footer {
+        height: 545px;
+        top: 3503px;
+    }
+    
+    .footer-page {
+        bottom: 386px;
+    }    
+
+}
+
+@media (max-width: 639px) {
+
+    .zoos {
+        width: 320px;
+        height: 693px;
+
+        &-panda {
+
+            &__main {
+                bottom: 190px;
+            }
+
+            &__card {
+
+                &-text {
+                    margin: 161px auto 42px;
+
+                    &-title {
+                        margin: 28px 0px 24px 0px;
+                    }
+
+                }
+
+                &-content {
+
+                    &-lists {
+                        margin: 30px auto 134px auto;
+
+                    }
+
+                    &-list {
+
+                        &-title {
+                            top: 0;
+                        }
+
+                        &-subtitle {
+
+                            &-1 {
+                                padding: 20px 0 9px 0;
+                            }
+                        }
+
+                    }
+
+                    & > div > ul > li:nth-child(2) > span > span.zoos-panda__card-content-list-subtitle-1 {
+                        padding: 20px 0 0px 0;
+                    }
+
+                    & > div > ul > li:nth-child(3) > span > span.zoos-panda__card-content-list-subtitle-1 {
+                        padding: 17px 0 2px 0;
+                    }
+
+                    & > div > ul > li:nth-child(4) > span > span.zoos-panda__card-content-list-subtitle-1 {
+                        padding: 0px 0 4px 0;
+                    }
+
+                    & > div > ul > li:nth-child(5) > span > span.zoos-panda__card-content-list-subtitle-1 {
+                        padding: 1px 0 4px 0;
+                    }
+
+                    &-list-2 > span > span.zoos-panda__card-content-list-subtitle-1 {
+                        padding: 1px 0 4px 0;
+                    }
+
+                    & > div > ul > li:nth-child(7) > span > span.zoos-panda__card-content-list-subtitle-1 {
+                        padding: 1px 0 4px 0;
+                    }
+
+                    &-text {
+                        margin: -26px auto 85px auto;
+                        line-height: 150%;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .content {
+        width: 320px;
+    }
+
+    .donate {
+        width: 320px;
+        height: 539px;
+
+        &-page {
+            bottom: 182px;
+        }
+
+        &__title {
+            width: 300px;
+            margin: 0 auto;
+            margin: 20px auto 24px auto;
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        &__subtitle {
+            width: 300px;
+        }
+
+        &__content,
+        &__quick-donate {
+            width: 320px;
+            height: 100%;
+        }
+
+        &__quick-donate-title {
+            margin: 23px auto 10px auto;
+        }
+
+        &__button {
+            width: 300px;
+            height: 45px;
+            margin: 0 auto;
+
+            &-dollar {
+                width: 281px;
+
+                &-char {
+                    font-size: 16px;
+                    line-height: 20px;
+                    top: 12px;
+                    left: 26px;
+                }
+
+                &-text {
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 11px 0 0 40px;
+                }
+            }
+
+        }
+    
+    }
+
+    .footer-page {
+        bottom: 302px;
+    }
+
+    .wrapper-donate {
+        height: 539px;
+        top: 693px;
+    }
+
+    .wrapper-footer {
+        height: 709px;
+        top: 3480px;
+    }    
+
+}

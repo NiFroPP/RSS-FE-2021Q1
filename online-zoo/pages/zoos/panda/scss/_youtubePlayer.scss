@@ -1,0 +1,401 @@
+@import "../../../landing/scss/variables";
+
+// стили для страницы с Youtube-плеером
+.zoos-panda {
+
+    &__main {
+        position: relative;
+        bottom: 846px;
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__title {
+        padding: 54px 0 50px 0;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $Turquoise;
+    }
+
+    &__btn {
+        position: absolute;
+        right: 0;
+        top: 50px;
+    }
+
+    &__image-panda {
+        width: 1400px;
+        height: 787px;
+
+        position: absolute;
+        top: 170px;        
+        left: 0;
+        z-index: 1;
+
+        &-title {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 130%;
+            color: $White;
+            position: relative;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
+    &__title-slider {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 51px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 100px 0 30px 0;
+    }
+
+    &__slider {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin: 0 0 150px 160px;
+
+        &-elements {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            width: 1040px;
+        }
+
+        &-element {
+            margin: 0 20px;
+            border-radius: 5px;
+            transition: all ease 0.5s;
+            width: 320px;
+            height: 209px;
+
+            &-inframe {
+                border-radius: 5px;
+            }
+
+            &-active {
+                border: 3px solid $Orange;
+                box-sizing: border-box;
+            }
+
+            &-transparent {
+                position: relative;
+                width: 320px;
+                height: 209px;
+                border-radius: 5px;
+                bottom: 209px;
+
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .zoos-panda {
+
+        &__main {
+            bottom: 845px;;
+        }
+        &__title {
+            text-align: start;
+            padding: 30px 0 30px 325px;
+        }
+
+        &__btn {
+            top: 35px;
+            right: 40px;
+        }
+
+        &__image-panda {
+            width: 1025px;
+            height: 760px;
+            top: 126px;
+            left: 135px;
+        }
+
+        &__title-slider {
+            width: 1025px;
+            text-align: center;
+            padding: 0 0 0 261px;
+            margin: 10px 0 0 0;
+        }
+    
+        &__slider {
+            margin: 30px auto 100px auto;
+            padding: 0 0 0 160px;
+
+            &-elements {
+                width: 840px;
+            }
+
+            &-element {
+                width: 265px;
+                height: 209px;
+                position: relative;
+                margin: 0 10px;
+
+                &-inframe {
+                    width: 265px;
+                    height: 209px;
+                }
+
+                &-transparent {
+                    width: 265px;
+                }
+
+            }
+
+        }
+    
+    }
+    
+    .BTN__donate-now {
+        height: 54px;
+    }
+
+    .iframe-main {
+        width: 1025px;
+        height: 760px;
+        position: relative;
+        left: 135px;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .zoos-panda {
+
+        &__main {
+            bottom: 500px;
+        }
+
+        &__title {
+            width: 640px;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 51px;
+            padding: 26px 0 22px 146px;
+            margin: 0;
+        }
+
+        &__image-panda {
+            width: 542px;
+            height: 402px;
+            top: 103px;
+            left: 78px;
+        }
+
+        &__btn {
+            top: 520px;
+            right: 20px;
+            width: 212px;
+            height: 48px;
+        }
+
+        &__title-slider {
+            width: 200px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 130%;
+            text-transform: none;
+            padding: 0;
+            margin: 88px 0 20px 175px;
+        }
+
+        &__slider {
+            margin: 0;
+            padding: 0 0 80px 165px;
+
+            &-element {
+                width: 135px;
+                height: 106px;
+                margin: 0 10px;
+
+                &-transparent {
+
+                    &-1,
+                    &-2,
+                    &-3 {
+                        width: 135px;
+                        height: 106px;
+
+                        &-img {
+                            width: 72px;
+                            height: 22px;
+                        }
+
+                    }
+
+                    &-1 {
+                        left: 176px;
+                    }
+    
+                    &-2 {
+                        left: 330px;
+                    }
+    
+                    &-3 {
+                        left: 486px;
+                    }
+    
+                }
+
+            }
+
+        }
+
+    }
+
+    .BTN__donate-now {
+        width: 212px;
+        height: 48px;
+    }
+
+    .SLIDER-left-n,
+    .SLIDER-right-n {
+        display: none;
+    }
+    
+    .iframe-main {
+        width: 542px;
+        height: 402px;
+        left: 78px;
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .zoos-panda {
+
+        &__main {
+            bottom: 300px;
+        }
+
+        &__title {
+            width: 258px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            text-align: center;
+            padding: 0;
+            margin: 20px 0 14px 55px;
+        }
+
+        &__image-panda {
+            width: 270px;
+            height: 200px;
+            top: 52px;
+            left: 50px;
+
+            &-title {
+                font-weight: 500;
+                font-size: 7px;
+                top: 0px;
+                left: 4px;
+            }
+    
+        }
+
+        &__title-slider {
+            width: 171px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: uppercase;
+            margin: 18px 0 20px 86px;
+        }
+
+        &__slider {
+            padding: 0;
+            overflow: hidden;
+            margin: 0 0 145px 0;
+
+            & > div:nth-child(6) {
+                display: none;
+            }
+
+            &-element {
+                width: 140px;
+                height: 100px;
+                margin: 0 10px;
+
+                &-transparent {
+
+                    &-1,
+                    &-2,
+                    &-3 {
+                        width: 140px;
+                        height: 100px;
+
+                        &-img {
+                            width: 74px;
+                            height: 23px;
+                            border-radius: 5px 0px;
+                        }
+
+                    }
+
+                    &-1 {
+                        left: 10px;
+                    }
+    
+                    &-2 {
+                        left: 170px;
+                    }
+    
+                    &-3 {
+                        display: none;
+                        left: 330px;
+                    }
+    
+                }
+
+            }
+
+        }
+
+        &__btn {
+            width: 300px;
+            height: 45px;
+            top: 468px;
+            left: 10px;
+        }
+
+    }
+
+    .iframe-main {
+        width: 270px;
+        height: 200px;
+        left: 50px;
+    }
+
+    .BTN {
+
+        &-link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        }
+
+        &__donate-now {
+            width: 300px;
+            height: 45px;
+        }
+
+    }
+
+}

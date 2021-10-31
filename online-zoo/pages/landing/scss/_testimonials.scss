@@ -1,0 +1,399 @@
+@import "variables.scss";
+
+// стили для блока Отзывы (testimonials)
+.testimonials {
+    &-page {
+        background: $Navy;
+    }
+    &-background {
+        width: 1920px;
+        height: 1776px;
+        margin: 0 auto;
+        background: url("../../../assets/images/panda-background.png");
+    }
+    &.content > input{
+        display: none;
+    }
+
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: row;
+
+    &__article {
+        &-title {
+            width: 440px;
+            font-weight: 600;
+            font-size: 54px;
+            line-height: 66px;
+            text-transform: uppercase;
+            color: $White;
+            padding: 100px 0 50px 0;
+        }
+        &-subtitle {
+            width: 560px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 130%;
+            color: $White;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        margin: 0 0 0 40px;
+        transition: all 0.5s;
+    }
+
+    &__cards-block {
+        transition: all ease-in-out 1s;
+    }
+    &__card {
+        width: 515px;
+        height: 463px;
+        background: $White;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+
+        &-logo {
+            width: 92px;
+            height: 96px;
+            margin: 20px 0 0 37px;
+        }
+        &-logo>img {
+            padding: 25px 16px;
+        }
+
+        &-address {
+            margin: 20px 0 20px 50px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 130%;
+        }
+        &-article {
+            width: 415px;
+            height: 162px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 150%;
+        }
+        &-autor {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: uppercase;
+            margin: 19px 0 0 50px;
+        }
+    }
+
+    &__slider-btns {
+        flex: none;
+        margin: 60px 0 0 860px;
+    }
+
+    &__leave-btn {
+        margin: 376px 0 0 260px;
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .content.testimonials {
+        width: 1200px;
+    }
+
+    .testimonials {
+        flex-direction: column;
+
+        &-background {
+            width: 1200px;
+            height: 1880px;
+            background: url("../../../assets/images/panda-background-1200.png");
+        }
+
+        &__article {
+
+            &-title {
+                padding: 100px 0 20px 40px;
+            }
+
+            &-subtitle {
+                width: 577px;
+                margin: 0 0 60px 40px;
+            }
+    
+        }
+
+        &__cards {
+            margin: 0 0 0 140px;
+        }
+
+        &__card {
+            position: relative;
+        }
+
+        &__slider-btns {
+            margin: 100px 0 0 980px;
+        }
+
+        &__leave-btn {
+            margin: 97px 0 0 135px;
+        }
+        
+    }
+    
+}
+
+@media (max-width: 1199px) {
+
+    .content.testimonials {
+        width: 640px;
+    }
+
+    .testimonials {
+
+        &-page {
+            height: 1670px;
+        }
+    
+        &-background {
+            width: 640px;
+            height: 1670px;
+            background: no-repeat url("../../../assets/images/panda-background-640.png");
+            background-position: bottom;
+        }
+
+        &__article {
+
+            &-title {
+                padding: 60px 0 20px 20px;
+            }
+
+            &-subtitle {
+                width: 577px;
+                margin: 0 0 60px 20px;
+            }
+    
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            grid-gap: 0;
+            margin: 0 0 0 20px;
+        }
+
+        &__card {
+            width: 523px;
+            height: 371px;
+            margin: 0 20px 0 0;
+
+            &-logo > img {
+                padding: 25px 0px;
+            }
+    
+
+            &-address {
+                position: relative;
+                left: 150px;
+                bottom: 65px;
+                width: 220px;
+                text-align: center;
+                margin: 0;
+            }
+    
+
+            &-article {
+                width: 463px;
+                height: 162px;
+                margin: -33px 30px;
+                text-align: center;
+            }
+
+            &-autor {
+                text-align: center;
+                margin: 20px 0 0 0;
+            }    
+    
+        }
+
+        &__slider-btns {
+            display: none;
+        }
+
+        &__leave-btn {
+            width: 368px;
+            margin: 50px 0 0 20px;
+        }
+
+    }
+
+    .BTN__leave-feedback {
+        width: 368px;
+
+        &-text {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .content.testimonials {
+        width: 320px;
+    }
+
+    .testimonials {
+
+        &-page {
+            height: 1422px;
+        }
+    
+        &-background {
+            width: 320px;
+            height: 1420px;
+            background: no-repeat url("../../../assets/images/panda-background-320.png");
+            background-position: bottom;
+        }
+
+        &__article {
+
+            &-title {
+                width: 300px;
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 32px;
+                text-align: center;
+                padding: 0;
+                margin: 0 auto;
+            }
+
+            &-subtitle {
+                width: 300px;
+                font-size: 18px;
+                line-height: 150%;
+                text-align: center;
+                margin: 25px auto 40px;
+            }
+    
+        }
+
+        &__cards {
+            position: relative;
+            width: 300px;
+            height: 549px;
+
+            display: block;
+            overflow: hidden;
+            margin: 0 0 0 10px;
+        }
+
+        &__card {
+            width: 300px;
+            height: 549px;
+
+            opacity: 0;
+            position: absolute;
+            z-index: 0;
+            transition: all 0.5s;
+
+            display: flex;
+            flex-direction: column;
+
+            margin: 0 20px 0 0;
+
+            &-logo > img {
+                padding: 25px 0px;
+            }
+
+            &-address {
+                position: static;
+                width: 220px;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            &-article {
+                width: 260px;
+                height: 275px;
+                margin: 20px auto 0;
+                text-align: center;
+            }
+
+            &-autor {
+                text-align: center;
+                margin: 0;
+            }    
+    
+        }
+
+        &__leave-btn {
+            width: 300px;
+            margin: 74px 0 0 10px;
+        }
+
+        &__controls {
+            width: 108px;
+            position: relative;
+            left: 114px;
+            top: 25px;
+        }
+
+        &__controls label {
+            width: 8px;
+            height: 8px;
+            position: relative;
+
+            cursor: pointer;
+            display: inline-block;
+            margin: 0px 16px 0 0;
+            border-radius: 50%;
+            transition: all ease-in-out 0.5s;
+        }
+
+        &__controls label:after {
+            border: 2px solid $White;
+            content: " ";
+            display: block;
+            height: 12px;
+            left: -2px;
+            position: absolute;
+            top: -2px;
+            width: 12px;
+            border-radius: 50%;
+        }
+
+    }
+
+    .testimonials__controls label:hover, 
+    #testimonials__slide1:checked ~ .testimonials__controls label:nth-of-type(1),
+    #testimonials__slide2:checked ~ .testimonials__controls label:nth-of-type(2),
+    #testimonials__slide3:checked ~ .testimonials__controls label:nth-of-type(3),
+    #testimonials__slide4:checked ~ .testimonials__controls label:nth-of-type(4) {
+        background: $White;
+    }
+
+    #testimonials__slide1:checked ~ .testimonials__cards > .testimonials__slide1,
+    #testimonials__slide2:checked ~ .testimonials__cards > .testimonials__slide2,
+    #testimonials__slide3:checked ~ .testimonials__cards > .testimonials__slide3,
+    #testimonials__slide4:checked ~ .testimonials__cards > .testimonials__slide4 {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+    }
+
+    .BTN__leave-feedback {
+
+        &-text {
+            text-transform: uppercase;
+        }
+    }
+
+}

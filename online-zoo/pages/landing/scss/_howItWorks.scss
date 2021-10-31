@@ -1,0 +1,210 @@
+@import "variables.scss";
+
+// стили для блока how it works
+.how-it-works {
+    &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 150px 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__image {
+
+        &-welcome {
+            width: 800px;
+            height: 531px;
+            background: url("../../../assets/images/welcome.jpg");
+        }
+
+        &-eagles {
+            width: 800px;
+            height: 531px;
+            background: url("../../../assets/images/eagles.jpg");
+        }
+
+    }
+
+    &__title,
+    &__subtitle {
+        margin: 25px 0;
+    }
+    
+    &__title {
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-transform: uppercase;
+        color: $Turquoise; 
+    }
+
+    &__subtitle {
+        width: 560px;
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+
+@media (max-width: 1919px) {
+
+    .how-it-works {
+
+        &.content {
+            width: 1200px;
+
+            & > div > div:nth-child(1) {
+                flex-direction: column-reverse;
+                margin: 100px 0 0 100px;
+            }
+
+            & > div > div:nth-child(2) {
+                margin: 74px 0 100px 440px;
+            }
+
+        }
+
+        &__image {
+
+            &-welcome {
+                width: 660px;
+                height: 438px;
+                background: url("../../../assets/images/welcome-1200.jpg");
+            }
+    
+            &-eagles {
+                width: 660px;
+                height: 438px;
+                background: url("../../../assets/images/eagles-1200.jpg");
+            }
+    
+        }
+    
+        &__block {
+            flex-direction: column;
+            margin: 0;
+        }
+
+        &__title {
+            width: 523px;
+            margin: 30px 0;
+        }
+
+        &__subtitle {
+            margin: 0;
+            width: 572px;
+            line-height: 150%;
+        }    
+        
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .how-it-works {
+
+        &.content {
+            width: 640px;
+
+            & > div > div:nth-child(1) {
+                flex-direction: column-reverse;
+                margin: 98px 0 0 0;
+            }
+
+            & > div > div:nth-child(2) {
+                margin: 50px 0 100px 0;
+            }
+
+        }
+
+        &__image {
+
+            &-welcome {
+                width: 640px;
+                height: 438px;
+                background: url("../../../assets/images/welcome-640.jpg");
+            }
+    
+            &-eagles {
+                width: 640px;
+                height: 425px;
+                background: url("../../../assets/images/eagles-640.jpg");
+            }
+    
+        }
+
+        &__title {
+            width: 523px;
+            margin: 30px 0 0 20px;
+        }
+
+        &__subtitle {
+            width: 600px;
+            margin: 30px 0 0 20px;
+        }    
+
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .how-it-works {
+
+        &.content {
+            width: 320px;
+
+            & > div > div:nth-child(1) {
+                flex-direction: column-reverse;
+                margin: 51px 0 0 0;
+            }
+
+            & > div > div:nth-child(2) {
+                margin: 45px 0 46px 0;
+            }
+
+        }
+
+        &__image {
+
+            &-welcome {
+                width: 320px;
+                height: 218px;
+                background: url("../../../assets/images/welcome-320.jpg");
+            }
+    
+            &-eagles {
+                width: 320px;
+                height: 213px;
+                background: url("../../../assets/images/eagles-320.jpg");
+            }
+    
+        }
+
+        &__title {
+            width: 300px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            margin: 30px 0 0 10px;
+        }
+
+        &__subtitle {
+            width: 300px;
+            height: 100%;
+            margin: 26px 0 0 10px;
+
+            &-excess {
+                display: none;
+            }
+        }    
+
+    }
+
+}

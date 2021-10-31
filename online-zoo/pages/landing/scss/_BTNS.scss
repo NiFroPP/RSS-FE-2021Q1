@@ -1,0 +1,302 @@
+@import "variables.scss";
+
+// кнопки для сайта
+
+.BTN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.5s;
+
+    &-link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-text {
+        margin: auto 10px auto 0;
+    }
+    &:hover {
+        transition: 0.5s;
+    }
+}
+
+.BTN__donate-now,
+.BTN__view-live-cam,
+.BTN__view-live-cam-transparent,
+.BTN__view-map-transparent {
+    width: 240px;
+    height: 74px;
+    transition: 0.5s;
+}
+
+.BTN__feed-transparent {
+    width: 142px;
+    height: 74px;
+    transition: 0.5s;
+}
+.BTN__send-message,
+.BTN__choose-your-favourite,
+.BTN__leave-feedback {
+    width: 359px;
+    height: 74px;
+    transition: 0.5s;
+}
+
+.BTN__donate-now,
+.BTN__view-live-cam {
+    background: $Orange;
+    &-text {
+        color: $White;
+    }
+    &-arrow {
+        fill: $White;
+    }
+}
+.BTN__donate-now:hover,
+.BTN__view-live-cam:hover {
+    background: $Orange-hover;
+    box-shadow: 0px 4px 30px rgba(245, 128, 33, 0.3);
+}
+
+.BTN__send-message,
+.BTN__leave-feedback:hover {
+    background: $Turquoise;
+    .BTN__send-message-text {
+        color: $White;
+    }
+    &-arrow {
+        fill: $White;
+    }
+}
+
+.BTN__send-message:hover {
+    background: $Turquoise-hover;
+    box-shadow: 0px 4px 30px rgba(0, 160, 146, 0.3);
+}
+
+
+.BTN__view-live-cam-transparent,
+.BTN__feed-transparent,
+.BTN__view-map-transparent {
+    transition: 0.5s;
+    &-text {
+        color: $Orange;
+    }
+    &-arrow {
+        fill: $Orange;
+    }
+}
+.BTN__view-live-cam-transparent:hover,
+.BTN__feed-transparent:hover,
+.BTN__view-map-transparent:hover {
+    background-color: $Orange;
+
+    .BTN__feed-transparent-text,
+    .BTN__view-live-cam-transparent-text,
+    .BTN__view-map-transparent-text {
+        color: $White;
+    }
+    .BTN__feed-transparent-arrow,
+    .BTN__view-live-cam-transparent-arrow,
+    .BTN__view-map-transparent-arrow {
+        fill: $White;
+    }
+}
+
+.BTN__choose-your-favourite {
+    border: 1px solid $Navy;
+    transition: 0.5s;
+    &-text {
+        color: $Navy;
+    }
+    &-arrow {
+        fill: $Navy;
+    }
+}
+.BTN__choose-your-favourite:hover {
+    background: $Navy;
+    .BTN__choose-your-favourite-text {
+        color: $White;
+    }
+    .BTN__choose-your-favourite-arrow {
+        fill: $White;
+    }
+}
+
+.BTN__leave-feedback {
+    border: 1px solid $White;
+    transition: 0.5s;
+    &-text {
+        color: $White;
+    }
+}
+
+.donate__button {
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+    height: 74px;
+    border: 1px solid $White;
+    border-radius: 5px;
+    transition: 0.5s;
+
+    &-arrow {
+        cursor: pointer;
+        width: 80px;
+        background: $Orange;
+        border-radius: 5px;
+
+        &:hover {
+            transition: 0.5s;
+            background: $Orange-hover;
+        }
+    }
+
+    &-dollar {
+        position: relative;
+
+        &-char {
+            position: absolute;
+            top: 26px;
+            left: 14px;
+            color: $White;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &-text {
+            width: 240px;
+            color: $White;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: uppercase;
+            background: $Navy;
+    
+            padding: 26px 0 0 32px;
+        }
+
+        &-text::placeholder {
+            color: $White;
+        }
+    
+    }
+
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.SLIDER {
+    width: 175px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-left {
+        width: 60px;
+        height: 60px;
+        display: block;
+    }
+
+    &-left-n,
+    &-right-n,
+    &-left-w,
+    &-right-w {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 60px;
+        height: 60px;
+
+        border-radius: 5px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    &-left-n,
+    &-right-n {
+        border: 1px solid $Navy;
+    }
+    &-left-w,
+    &-right-w {
+        border: 1px solid $White;
+    }
+
+    &-left-n-svg,
+    &-right-n-svg {
+        fill: $Navy;
+    }
+    &-left-w-svg,
+    &-right-w-svg {
+        fill: $White;
+    }
+
+    &-left-n:hover,
+    &-right-n:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        background: $Navy;
+        border: 1px solid $Navy;
+        .SLIDER-left-n-svg,
+        .SLIDER-right-n-svg {
+            fill: $White;
+        }
+    }
+
+    &-left-w:hover,
+    &-right-w:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        background: $White;
+        border: 1px solid $White;
+
+        .SLIDER-left-w-svg,
+        .SLIDER-right-w-svg {
+            fill: $Navy;
+        }
+    }
+
+}
+
+.btn-location {
+
+    &-center {
+        fill: $Orange;
+        transition: 0.7s;
+    }
+
+    &-frame {
+        opacity: 0;
+        transition: 0.7s;
+    }
+
+}
+
+.btn-location:hover {
+    cursor: pointer;
+
+    
+    .btn-location-center {
+        fill: $White;
+        transition: 0.7s;
+    }
+    .btn-location-frame {
+        opacity: 1;
+        transition: 0.7s;
+    }
+}

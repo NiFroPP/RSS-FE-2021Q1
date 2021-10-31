@@ -1,0 +1,27 @@
+// Импорт шрифта Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+@import "nullstyle.scss";  // Файл обнуляющих стилей
+@import "variables.scss";  // Переменные 
+@import "BTNS.scss";  // кнопки для сайта
+
+@import "header";  // файл шапки (header)
+@import "hero";  // файл титульной страницы (hero)
+@import "howItWorks";  // файл страницы "Как это работает" (how it works)
+@import "donate";  // стили для блока Пожертование (donate)
+@import "petsInZoo";  // стили для блока Звери в Зоо (Pets in Zoo)
+@import "payAndFeed";  // стили для блока Оплатить и кормить (PAY AND FEED)
+@import "testimonials";  // стили для блока Отзывы (testimonials)
+@import "yourFavourite"; // стили для блока Выбери себе фаворита (choose your favourite)
+@import "footer"; // стили для блока Нижний колонтитул (footer)
+@import "md-modal"; // модальное окно
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+    width: 1400px;
+    margin: 0 auto;
+}

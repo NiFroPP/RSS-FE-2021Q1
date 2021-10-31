@@ -1,0 +1,374 @@
+@import "../../../landing/scss/variables";
+
+// боковая панель навигации по животным
+.side-panel {
+    width: 220px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    z-index: 10;
+    border-bottom: 1px solid $White;
+    border-left: 1px solid $White;
+    border-right: 1px solid $White;
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 80px;
+        background: $Navy;
+        border-bottom: 1px solid $White;
+        margin: 0 auto;
+    }
+
+    &__bottom {
+        width: 100%;
+        height: 80px;
+        background: $Navy;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+
+    &__arrows {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-top {
+            margin: 18px 0 0 40px;
+        }
+    }
+
+    &__arrows:hover {
+        cursor: pointer;
+
+        path {
+            fill: $Orange;
+        }
+    }
+
+    &__cards {
+        width: 100%;
+        height: 686px;
+        overflow: hidden;
+    }
+
+    &__card  {
+        height: 171px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $Navy;
+        border-bottom: 1px solid $White;
+        transition: 0.7s;
+
+        &-active {
+            cursor: auto;
+            pointer-events: none;
+
+        }
+        
+        &-circle {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid $White;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-button {
+            width: 104px;
+            height: 104px;
+            background: $Orange;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.7s;
+            z-index: 1;
+
+            &-active {
+                background: $White;
+            }
+    
+        }
+
+        &-button:hover {
+            background: $White;
+        }
+
+        &-text {
+            display: none;
+            width: 162px;
+            height: 69px;
+            font-size: 18px;
+            line-height: 130%;
+            color: $White;
+        }
+        
+    }
+
+    &__icon {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+}
+
+.side-panel.active {
+    transition: all 0.5s ease-in-out;
+    width: 300px;
+
+    .side-panel {
+
+        &__top {
+        transition: all 0.5s ease-in-out;
+        }
+    
+        &__arrows {
+
+            &-top {
+                position: relative;
+                top: 20px;
+                left: 120px;
+                margin: 0;
+                transform: rotate(180deg);
+
+                &-live {
+                    display: block;
+                }
+    
+            }
+
+        }
+
+        &__card {
+
+            &-text {
+                display: block;
+                margin: 0 0 0 10px;
+            }
+
+            &-circle {
+                left: 2px;
+            }
+    
+        }
+
+    }
+        
+}
+
+@media (max-width: 1919px) {
+
+    .side-panel {
+        width: 115px;
+        height: 846px;
+        transition: all 0.5s ease-in-out;
+
+        &__top {
+            margin: 0 auto;
+
+            &-live {
+                display: none;
+            }
+            
+        }
+    
+        &__bottom {
+            height: 80px;
+        }
+
+        &__arrows {
+    
+            &-top {
+                margin: 18px 0 0 36px;
+            }
+
+        }
+
+        &__icon {
+            width: 40%;
+            height: 40%;
+        
+            & path {
+                fill: $Orange;  
+                transition: 0.7s;
+            }
+        }   
+
+        &__card  {
+            height: 100px;
+            height: 171px;
+
+            &-active {
+                cursor: auto;
+            }
+    
+            &-circle {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+
+            &-button {
+                width: 100px;
+                height: 100px;
+                background: $Navy;
+    
+                &-active {
+                    background: $Navy;
+                    cursor: auto;
+
+                    svg {
+                        width: 60%;
+                        height: 60%;
+                    }
+
+                    path {
+                        fill: $White;
+                    }
+
+                }
+        
+            }
+
+            &-button:hover {
+                background: $Navy;
+
+                .side-panel__icon path {
+                    fill: $White;
+                }
+            }
+        }    
+
+    }
+
+    .side-panel.active {
+
+        .side-panel {
+    
+            &__top {
+    
+                &-live {
+                    display: block;
+                }
+        
+            }
+    
+        }
+    
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .side-panel {
+        width: 78px;
+        height: 500px;
+        top: 110px;
+
+        &__top,
+        &__bottom  {
+            height: 50px;
+        }
+
+        &__arrows {
+    
+            &-top {
+                margin: 5px 0 0 19px;
+            }
+
+        }
+
+        &__icon {
+            width: 50%;
+            height: 50%;
+        
+            & path {
+                fill: $Orange;  
+                transition: 0.7s;
+            }
+        }   
+
+        &__card  {
+            height: 100px;
+
+            &-circle {
+                width: 70px;
+                height: 70px;
+            }
+            &-button {
+                width: 65px;
+                height: 65px;
+                background: $Navy;
+            }
+            
+            &-active {
+                background: $Navy;
+                cursor: auto;
+
+                svg {
+                    width: 65%;
+                    height: 65%;
+                }
+                path {
+                    fill: $White;
+                }
+
+            }
+    
+        }
+        
+    }   
+
+}
+
+@media (max-width: 639px) {
+
+    .side-panel {
+        width: 50px;
+        height: 300px;
+
+        &__arrows {
+    
+            &-top {
+                margin: 4px 0 0 5px;
+            }
+        }
+
+        &__card  {
+            height: 50px;
+
+            &-circle {
+                width: 45px;
+                height: 45px;
+            }
+
+            &-button {
+                width: 40px;
+                height: 40px;
+            }
+
+
+
+        }
+    
+
+    }
+}

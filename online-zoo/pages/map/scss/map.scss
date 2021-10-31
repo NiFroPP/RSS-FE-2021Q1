@@ -1,0 +1,336 @@
+// Импорт шрифта Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+@import "../../landing/scss/nullstyle.scss";  // Файл обнуляющих стилей
+@import "../../landing/scss/variables.scss";  // Переменные 
+@import "../../landing/scss/BTNS";  // кнопки для сайта
+
+@import "../../landing/scss/header";  // файл шапки (header)
+
+@import "../../landing/scss/footer"; // стили для блока Нижний колонтитул (footer)
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.map {
+
+    &__title {
+        margin: 40px auto 0 auto;
+
+        width: 601px;
+        height: 131px;
+
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $Navy;
+    }
+    
+    &__image {
+        width: 1406px;
+        height: 912px;   
+        margin: 70px auto 150px auto;
+
+        &-eagle,
+        &-alligator,
+        &-lion,
+        &-gorilla ,
+        &-lemur,
+        &-panda,
+        &-tiger,
+        &-coala {
+            width: 100px;
+            height: 144px;            
+            position: relative;
+        }
+
+        &-eagle {
+            bottom: 542px;
+            left: 133px;
+        }
+        &-alligator {
+            bottom: 663px;
+            left: 266px;
+        }
+        &-lion {
+            bottom: 762px;
+            left: 551px;
+        }
+        &-gorilla {
+            bottom: 890px;
+            left: 658px;
+        }
+        &-lemur {
+            bottom: 913px;
+            left: 761px;
+        }
+        &-panda {
+            bottom: 1306px;
+            left: 918px;
+        }
+        &-tiger {
+            bottom: 1283px;
+            left: 990px;
+        }
+        &-coala {
+            bottom: 1313px;
+            left: 1121px;
+        }
+    }
+
+}
+
+@media (max-width: 1919px) {
+
+    .header-content {
+        width: 1000px;
+    }
+
+    .map {
+        padding-top: 110px;
+        
+        &__title {
+            margin: 30px auto 0 auto;
+    
+            width: 595px;
+            height: 119px;
+        }
+
+        &__image {
+            width: 1200px;
+            height: 778px;   
+            margin: 30px auto 100px auto;
+
+            &-map {
+                width: 1200px;
+                height: 778px;   
+            }
+
+            &-eagle {
+                bottom: 494px;
+                left: 97px;
+            }
+            &-alligator {
+                bottom: 605px;
+                left: 225px;
+            }
+            &-lion {
+                bottom: 726px;
+                left: 461px;
+            }
+            &-gorilla {
+                bottom: 848px;
+                left: 553px;
+            }
+            &-lemur {
+                bottom: 890px;
+                left: 644px;
+            }
+            &-panda {
+                bottom: 1269px;
+                left: 824px;
+            }
+            &-tiger {
+                bottom: 1233px;
+                left: 835px;
+            }
+            &-coala {
+                bottom: 1293px;
+                left: 948px;
+            }    
+    
+        }
+        
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .map {
+
+        &__title {
+            width: 600px;
+            height: 121px;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 51px;
+            margin: 30px auto 0 auto;
+        }
+
+        &__image {
+            width: 640px;
+            height: 415px;   
+            margin: 50px auto 100px auto;
+
+            &-map {
+                width: 640px;
+                height: 415px;   
+            }
+
+            &-eagle,
+            &-gorilla,
+            &-lemur,
+            &-panda,
+            &-eagle svg,
+            &-gorilla svg,
+            &-lemur svg,
+            &-panda svg {
+                width: 66px;
+                height: 83px;            
+            }
+
+            &-alligator,
+            &-lion,
+            &-tiger,
+            &-coala,
+            &-alligator img,
+            &-lion img,
+            &-tiger img,
+            &-coala img {
+                width: 60px;
+                height: 78px;            
+            }
+    
+            &-eagle {
+                bottom: 252px;
+                left: 57px;
+            }
+            &-alligator {
+                bottom: 319px;
+                left: 123px;
+            }
+            &-lion {
+                bottom: 375px;
+                left: 254px;
+            }
+            &-gorilla {
+                bottom: 443px;
+                left: 299px;
+            }
+            &-lemur {
+                bottom: 472px;
+                left: 348px;
+            }
+            &-panda {
+                bottom: 675px;
+                left: 447px;
+            }
+            &-tiger {
+                bottom: 668px;
+                left: 452px;
+            }
+            &-coala {
+                bottom: 705px;
+                left: 499px;
+            }    
+    
+        }
+
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .map {
+
+        &__title {
+            width: 300px;
+            height: 58px;
+            font-size: 26px;
+            line-height: 130%;
+            text-transform: none;
+            margin: 20px auto 0 auto;
+        }
+
+        &__image {
+            width: 320px;
+            height: 234px;
+            overflow: hidden;
+            margin: 30px auto 53px auto;
+
+            &-map {
+                position: relative;
+                right: 21.5px;
+                width: 362px;
+                height: 234px;   
+            }
+
+            &-panda {
+                width: 58px;
+                height: 72px;            
+            }
+
+            &-eagle,
+            &-gorilla,
+            &-lemur,
+            &-panda,
+            &-eagle svg,
+            &-gorilla svg,
+            &-lemur svg,
+            &-panda svg {
+                width: 58px;
+                height: 72px;            
+            }
+
+            &-alligator,
+            &-lion,
+            &-tiger,
+            &-coala,
+            &-alligator img,
+            &-lion img,
+            &-tiger img,
+            &-coala img {
+                width: auto;
+                height: 62px;            
+            }
+    
+            &-eagle {
+                bottom: 160px;
+                left: 4px;
+            }
+            &-alligator {
+                bottom: 213px;
+                left: 48px;
+            }
+            &-lion {
+                bottom: 271px;
+                left: 121px;
+            }
+            &-gorilla {
+                bottom: 316px;
+                left: 143px;
+            }
+            &-lemur {
+                bottom: 365px;
+                left: 169px;
+            }
+            &-panda {
+                bottom: 499px;
+                left: 211px;
+            }
+            &-tiger {
+                bottom: 524px;
+                left: 234px;
+            }
+            &-coala {
+                bottom: 556px;
+                left: 262px;
+            }    
+    
+        }
+
+    }
+
+}
