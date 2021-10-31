@@ -1,0 +1,80 @@
+#game-mode {
+  display: none;
+}
+
+.game-mode {
+  &__switch {
+    width: 200px;
+    height: 40px;
+
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100px;
+
+    color: #333;
+
+    background: #cbd5de;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:after {
+      content: "Train";
+
+      width: 100px;
+      height: 40px;
+
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      border-radius: 100px;
+
+      background: #0cf;
+
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
+}
+
+:checked + .game-mode__switch {
+  right: 3rem;
+}
+
+:checked + .game-mode__switch:after {
+  content: "Play";
+
+  right: 100px;
+
+  border-radius: 100px;
+
+  background: #fc6666;
+}
+
+@media screen and (max-width: 868px) {
+  .game-mode {
+    &__switch {
+      width: 150px;
+
+      right: 0.5rem;
+
+      &:after {
+        width: 75px;
+
+        right: 0rem;
+      }
+    }
+  }
+  :checked + .game-mode__switch {
+    right: 0.5rem;
+  }
+  :checked + .game-mode__switch:after {
+    right: 75px;
+  }
+}

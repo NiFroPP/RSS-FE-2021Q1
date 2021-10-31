@@ -1,0 +1,25 @@
+.nav.open .menu {
+  visibility: visible;
+  left: 0%;
+}
+
+.menu__overlay {
+  display: block;
+  transition: 0.5s;
+}
+
+.nav.open .menu__overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #313940;
+
+  opacity: 0.6;
+
+  z-index: 5;
+}
