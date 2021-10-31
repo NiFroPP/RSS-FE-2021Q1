@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #313940;
+  &-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  &-container,
+  &__menu {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__heading {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  &__logo {
+    color: #cbd5de;
+    transition: 0.3s;
+  }
+  &__logo:hover {
+    color: #fff;
+  }
+  &__about-game,
+  &__best-score,
+  &__settings,
+  &__game,
+  &__registration {
+    width: 100px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #cbd5de;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__about-game:hover,
+  &__best-score:hover,
+  &__settings:hover,
+  &__game:hover,
+  &__registration:hover {
+    border: 1px solid #cbd5de;
+    background-color: #cbd5de;
+    color: #313940;
+  }
+  &__registration {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+}
+
+.about-game--active .header__about-game,
+.best-score--active .header__best-score,
+.settings--active .header__settings {
+  border: 1px solid #cbd5de;
+  background-color: #cbd5de;
+  color: #313940;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &__menu {
+      flex-direction: column;
+    }
+    &__about-game,
+    &__best-score,
+    &__settings {
+      margin: 5px;
+    }
+  }
+}

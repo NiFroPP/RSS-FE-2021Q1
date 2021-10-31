@@ -1,0 +1,27 @@
+@import "./menu/menu.scss";
+@import "./buttons//buttons.scss";
+
+.main__registration {
+  display: none;
+
+  width: 80%;
+  margin: 0 auto;
+  background-color: #efefef;
+  box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.2);
+  border-radius: 5px;
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.5);
+  }
+}
+.registration--active .main__registration {
+  display: block;
+}
+
+.registration {
+  &__title {
+    font-size: 30px;
+    color: #313940;
+    padding: 10px;
+  }
+}

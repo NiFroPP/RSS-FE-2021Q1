@@ -1,0 +1,50 @@
+.registration {
+  &__player,
+  &__player-avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
+  &__player-avatar {
+    justify-content: center;
+
+    height: 150px;
+    border: 1px solid #313940;
+    border-radius: 50%;
+  }
+  &__player-name {
+    width: 50%;
+  }
+  &__player-avatar {
+    width: 30%;
+  }
+  &__name {
+    font-size: 20px;
+    color: #313940;
+    margin: 10px;
+  }
+  &__first-name,
+  &__last-name,
+  &__email-name {
+    font-size: 20px;
+    color: #313940;
+    margin: 10px;
+    padding-left: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.2);
+    transition: 0.5s;
+  }
+  &__first-name:hover,
+  &__last-name:hover,
+  &__email-name:hover {
+    box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.5);
+  }
+  &__first-name.valid,
+  &__last-name.valid,
+  &__email-name.valid {
+    border: 1px solid green;
+  }
+}

@@ -1,0 +1,28 @@
+.registration {
+  &__buttons,
+  &__add-user,
+  &__cancel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+  }
+  &__add-user,
+  &__cancel {
+    width: 150px;
+    height: 30px;
+
+    background-color: #efefef;
+    box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.2);
+    border-radius: 5px;
+    transition: 0.5s;
+    &:hover {
+      cursor: pointer;
+      background: #313940;
+      color: #efefef;
+      box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.5);
+    }
+  }
+}

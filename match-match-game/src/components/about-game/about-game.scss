@@ -1,0 +1,44 @@
+.main__about-game {
+  display: none;
+
+  width: 80%;
+  margin: 0 auto;
+  background-color: #efefef;
+  box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.2);
+  border-radius: 5px;
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.5);
+  }
+}
+.about-game--active .main__about-game {
+  display: block;
+}
+
+.about-game {
+  &__title {
+    font-size: 30px;
+    color: #313940;
+    padding: 10px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__rigistration,
+  &__sittings,
+  &__start-game,
+  &__total-scores {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #313940;
+    line-height: 130%;
+    margin: 10px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(49, 57, 64, 0.2);
+  }
+}

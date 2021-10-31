@@ -1,0 +1,16 @@
+.timer {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(49, 57, 64, 0.5);
+  margin: 10px auto;
+  padding: 10px;
+  transition: 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 0 10px 10px rgba(49, 57, 64, 0.5);
+  }
+}
