@@ -1,0 +1,51 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+}
+.footer {
+  background-color: #313940;
+  &__github {
+    display: block;
+    width: 120px;
+    height: 45px;
+    padding-left: 45px;
+    background-image: url("../../../public/images/github.svg");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    line-height: 45px;
+    color: #cbd5de;
+    transition: 0.5s;
+  }
+  &__github:hover {
+    color: #fff;
+  }
+  &__rss {
+    display: block;
+    position: relative;
+    width: 86px;
+    height: 32px;
+    background-image: url("../../../public/images/rss.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-right: 25px;
+  }
+  &__rss-year {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 21px;
+    letter-spacing: -2px;
+    color: #cbd5de;
+    line-height: 0.9;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  &__rss:hover &__rss-year {
+    right: -5px;
+    letter-spacing: 0;
+  }
+}

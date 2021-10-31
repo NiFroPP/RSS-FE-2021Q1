@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 80%;
+
+  margin: 0 auto;
+}
+.main {
+  min-height: calc(100vh - 70px - 45px);
+
+  background-color: #efefef;
+}
+.road {
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed white;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.garage {
+  &__create-update-cars {
+    display: flex;
+    flex-direction: column;
+  }
+  &__create-cars,
+  &__update-cars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem 0;
+  }
+  &__create-color,
+  &__update-color {
+    margin: 0 0.5rem;
+  }
+}
+
+.race {
+  &-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-reset {
+    margin: 0 0.5rem;
+  }
+}
+
+.garage {
+  padding: 0.5rem 0;
+
+  &__title,
+  &__pages {
+    text-align: center;
+  }
+}
+
+.icon.enabling {
+  color: rgb(107, 176, 255);
+}
+.message {
+  position: absolute;
+  display: none;
+  text-align: center;
+
+  width: 50%;
+  top: 60%;
+  left: 25%;
+
+  font-size: 3rem;
+
+  color: blue;
+}
+.message.visible {
+  display: block;
+}
